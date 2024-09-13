@@ -4,9 +4,13 @@ main:
   #   url: https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/
   - title: "About"
     url: /about/
+  - title: "Category"
+    url: /categories/
+  - title: "Tag"
+    url: /tags/
+  # - title: "Github"
+  #   url: https://gagyeomkim.github.io
 
-  - title: "Github"
-    url: https://gagyeomkim.github.io
   # - title: "Sample Posts"
   #   url: /year-archive/
   # - title: "Sample Collections"
@@ -18,12 +22,12 @@ main:
 
 # sidebar navigation (categories)
 # 2022.02.15 sidebar update : simple ver.
-categories:
-  - title: "Machine Learning"
-    url: /categories/categories1/
-  - title: "Categories2"
-    url: /categories/categories2/
-  - title: "Categories3"
-    url: /categories/categories3/
-  - title: "Categories4"
-    url: /categories/categories4/
+# categories:
+#   - title: "Machine Learning"
+#     url: /categories/categories1/
+#   - title: "Categories2"
+#     url: /categories/categories2/
+#   - title: "Categories3"
+#     url: /categories/categories3/
+#   - title: "Categories4"
+#     url: /categories/categories4/
