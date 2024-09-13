@@ -24,7 +24,7 @@ name                     : "gagyeom"
 description              : "Everything not saved will be lost"
 url                      : "https://gagyeomkim.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
-repository               : #"gagyeomkim/github-blog-comments" # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
+repository               : "gagyeomkim/gagyeomkim.github.io" #"gagyeomkim/github-blog-comments" # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
 logo                     : # path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
 masthead_title           : # overrides the website title displayed in the masthead, use " " for no title
@@ -114,30 +114,30 @@ analytics:
 
 # Site Author
 author:
-  name             : "gagyeom"
+  name             : # "gagyeom"
   avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "Everything not saved will be lost"
+  bio              : # "Everything not saved will be lost"
   location         : 
   email            :
   links:
-    - label: "Email"
-      icon: "fas fa-fw fa-envelope-square"
-      # url: "mailto:your.name@email.com"
-    - label: "Website"
-      icon: "fas fa-fw fa-link"
-      # url: "https://your-website.com"
-    - label: "Twitter"
-      icon: "fab fa-fw fa-twitter-square"
-      # url: "https://twitter.com/"
-    - label: "Facebook"
-      icon: "fab fa-fw fa-facebook-square"
-      # url: "https://facebook.com/"
-    - label: "GitHub"
-      icon: "fab fa-fw fa-github"
-      # url: "https://github.com/"
-    - label: "Instagram"
-      icon: "fab fa-fw fa-instagram"
-      # url: "https://instagram.com/"
+    # - label: "Email"
+    #   icon: "fas fa-fw fa-envelope-square"
+    #   # url: "mailto:your.name@email.com"
+    # - label: "Website"
+    #   icon: "fas fa-fw fa-link"
+    #   # url: "https://your-website.com"
+    # - label: "Twitter"
+    #   icon: "fab fa-fw fa-twitter-square"
+    #   # url: "https://twitter.com/"
+    # - label: "Facebook"
+    #   icon: "fab fa-fw fa-facebook-square"
+    #   # url: "https://facebook.com/"
+    # - label: "GitHub"
+    #   icon: "fab fa-fw fa-github"
+    #   # url: "https://github.com/"
+    # - label: "Instagram"
+    #   icon: "fab fa-fw fa-instagram"
+    #   # url: "https://instagram.com/"
 
 # Site Footer
 footer:
@@ -287,6 +287,7 @@ whitelist:
 category_archive:
   type: liquid
   path: /categories/
+
 tag_archive:
   type: liquid
   path: /tags/
@@ -325,8 +326,8 @@ defaults:
       share: true
       related: true
       show_date : true
-      sidebar:
-        nav:"categories"
+      # sidebar:
+      #   nav: "categories"
       
 date_format: "%Y-%m-%d"
 
