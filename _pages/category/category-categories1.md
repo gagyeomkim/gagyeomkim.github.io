@@ -1,9 +1,9 @@
 ---
-title: "Categories1" # 카테고리 이름
+title: "Categories1"
 layout: category
-permalink: /categories/categories1/ # url
+permalink: /categories/categories1/
 author_profile: true
 taxonomy: Categories1
 sidebar:
-nav: "categories"
+  nav: "categories"
 ---
