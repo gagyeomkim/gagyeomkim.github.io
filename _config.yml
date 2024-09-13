@@ -115,7 +115,7 @@ analytics:
 # Site Author
 author:
   name             : #""
-  avatar           : /assets/images/profile.gif # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
+  avatar           : "/images/profile.gif" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   bio              : "Everything not saved will be lost"
   location         : 
   email            :
@@ -142,23 +142,23 @@ author:
 # Site Footer
 footer:
   links:
-    - label: "Twitter"
-      icon: "fab fa-fw fa-twitter-square"
-      # url:
-    - label: "Facebook"
-      icon: "fab fa-fw fa-facebook-square"
+    # - label: "Twitter"
+    #   icon: "fab fa-fw fa-twitter-square"
+    #   # url:
+    # - label: "Facebook"
+    #   icon: "fab fa-fw fa-facebook-square"
       # url:
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-      # url:
-    - label: "GitLab"
-      icon: "fab fa-fw fa-gitlab"
-      # url:
-    - label: "Bitbucket"
-      icon: "fab fa-fw fa-bitbucket"
-      # url:
-    - label: "Instagram"
-      icon: "fab fa-fw fa-instagram"
+      url: "https://github.com/gagyeomkim"
+    # - label: "GitLab"
+    #   icon: "fab fa-fw fa-gitlab"
+    #   # url:
+    # # - label: "Bitbucket"
+    #   icon: "fab fa-fw fa-bitbucket"
+    #   # url:
+    # - label: "Instagram"
+    #   icon: "fab fa-fw fa-instagram"
       # url:
 
 
@@ -264,6 +264,7 @@ plugins:
   - jekyll-gist
   - jekyll-feed
   - jekyll-include-cache
+  - jekyll-redirect-from
 
 # mimic GitHub Pages with --safe
 whitelist:
@@ -272,6 +273,7 @@ whitelist:
   - jekyll-gist
   - jekyll-feed
   - jekyll-include-cache
+  - jekyll-redirect-from
 
 
 # Archives
@@ -320,14 +322,19 @@ defaults:
       type: posts
     values:
       layout: single
-      author_profile: true
+      author_profile: false
       read_time: true
       comments: true
       share: true
       related: true
+      sidebar_main: true
+      toc: true
+      toc_label: "Table Of Contents"
+      toc_sticky: true
+      toc_icon: "bars"
       show_date : true
-      # sidebar:
-      #   nav: "categories"
+      sidebar:
+        nav: "counts"
       
 date_format: "%Y-%m-%d"
 
