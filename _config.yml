@@ -332,9 +332,9 @@ defaults:
       toc_label: "Table Of Contents"
       toc_sticky: true
       toc_icon: "bars"
-      show_date : true
       sidebar:
-        nav: "counts"
+          nav: "counts"
+      show_date : true
+
       
 date_format: "%Y-%m-%d"
-
