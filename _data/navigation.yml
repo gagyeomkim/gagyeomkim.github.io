@@ -40,10 +40,12 @@ main:
   # - title: "Category"
   #   url: /categories/
 counts:
-  - title: "category"
-    use: true
-  - title: "태그"
-    use: false
+  - title: "Contents"
+    children:
+      - title: "Categories"
+        use: true
+      - title: "Tags"
+        use: false
 
 # sidebar navigation (categories)
 # 2022.02.15 sidebar update : simple ver.
