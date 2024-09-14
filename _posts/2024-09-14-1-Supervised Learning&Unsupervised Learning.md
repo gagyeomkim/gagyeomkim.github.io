@@ -109,7 +109,7 @@ Clustering이란 각 주어진 data들이 얼마나 유사한지에 따라 데�
 
 위의 사진에서, Google news에서 클러스터링을 사용하는 것을 알 수 있다. 인터넷에 있는 수십만개의 뉴스 기사를 살펴보고 관련기사를 그룹화하고 있다.(다양한 기사에서 공통으로 언급된 단어가 발견되어 클러스터링 알고리즘이 해당 기사들을 찾음을 알 수 있다.)
 
-<img src="./images/2024-09-14-1-Supervised Learning&Unsupervised Learning/image-20240914185329486.png" alt="image-20240914185329486" style="zoom:50%;" />
+<img src="/images/2024-09-14-1-Supervised Learning&Unsupervised Learning/image-20240914185329486.png" alt="image-20240914185329486" style="zoom:50%;" />
 
 Clustering 알고리즘은 유전학 자료를 연구하는 데에도 사용된다.
 
