@@ -14,7 +14,7 @@ typora-root-url: ../
 
 이번글과 다음글에서는 target value y가 몇가지 가능한 값 중 하나만 가질 수 있는 classification(분류) 문제에 대해서 알아볼 것이다.
 
-![image-20240915015015116](/images/2024-09-15-3-Logistic regression 1/image-20240915015015116.png)
+![image-20240915015015116](https://cdn.jsdelivr.net/gh/gagyeomkim/gagyeomkim.github.io@master/images/2024-09-15-3-Logistic%20regression%201/image-20240915015015116.png)
 
 위의 사진은 classification에 대한 몇가지 예이다.
 
@@ -35,7 +35,7 @@ email이 스팸인지 아닌지, 온라인 금융거래가 사기인지 아닌�
 
 (학습 알고리즘 유형에 가장 잘 맞기에 보통 숫자를 사용하여 답 y를 많이 표현한다.)
 
-![image-20240915015028771](/images/2024-09-15-3-Logistic regression 1/image-20240915015028771.png)
+![image-20240915015028771](https://cdn.jsdelivr.net/gh/gagyeomkim/gagyeomkim.github.io@master/images/2024-09-15-3-Logistic%20regression%201/image-20240915015028771.png)
 
 우리는 **false인 값**을 **negative class**, **true인 값**을 **positive class**라고 지칭할 수 있다.
 
@@ -57,7 +57,7 @@ absence(부재) 또는 false의 개념 / presence(존재) 또는 True의 개념�
 
 ### Classification 알고리즘은 어떻게 구축할까?
 
-![image-20240915015051347](/images/2024-09-15-3-Logistic regression 1/image-20240915015051347.png)
+![image-20240915015051347](https://cdn.jsdelivr.net/gh/gagyeomkim/gagyeomkim.github.io@master/images/2024-09-15-3-Logistic%20regression%201/image-20240915015051347.png)
 
 위의 사진은 종양이 악성인지, 양성인지 분류하기 위한 training set의 example이다.
 
@@ -67,7 +67,7 @@ week1에서 classification에 대해서 알아볼 땐 아래의 모양처럼 하
 
 해당 example들을 classification하기 위해 linear regression을 시도해보자.
 
-![image-20240915015107646](/images/2024-09-15-3-Logistic regression 1/image-20240915015107646.png)
+![image-20240915015107646](https://cdn.jsdelivr.net/gh/gagyeomkim/gagyeomkim.github.io@master/images/2024-09-15-3-Logistic%20regression%201/image-20240915015107646.png)
 
 기존에 배운 Hypothesis를 통해 $f\_{w,b}(x)=wx+b$라는 식을 세울 수 있다.
 
@@ -77,7 +77,7 @@ Classification 문제를 해결하기 위해 linear regression을 이용해서 �
 
 분류가 잘 되는 것 같아 보이지만, 오른쪽에 하나의 example을 추가해보자.
 
-![image-20240915015133182](/images/2024-09-15-3-Logistic regression 1/image-20240915015133182.png)
+![image-20240915015133182](https://cdn.jsdelivr.net/gh/gagyeomkim/gagyeomkim.github.io@master/images/2024-09-15-3-Logistic%20regression%201/image-20240915015133182.png)
 
 하나의 training example이 추가됨에 따라 Hypothesis는 오른쪽으로 이동하게 되고, 수직으로 그은 구분선 또한 오른쪽으로 이동한다. (해당 구분선은 **decision boundary**라고 불린다.)
 
@@ -95,7 +95,7 @@ Classification 문제를 해결하기 위해 linear regression을 이용해서 �
 
 위에서 확인했듯이, linear regression은 Classification 문제에 적합한 알고리즘이 아니다.
 
-![image-20240915015146740](/images/2024-09-15-3-Logistic regression 1/image-20240915015146740.png)
+![image-20240915015146740](https://cdn.jsdelivr.net/gh/gagyeomkim/gagyeomkim.github.io@master/images/2024-09-15-3-Logistic%20regression%201/image-20240915015146740.png)
 
 세로축은 $0$또는 $1$만 사용하는 binary classification의 예이다. 
 
@@ -105,7 +105,7 @@ logistic regression에서는 data set에 위와 같은 s자형 곡선을 맞춘�
 
 **단, threshold를 거쳐 실제로 결정되는 output label y는 0.7이 아니라 0 또는 1이어야한다. 여기서 출력된 값은 $\\hat y$이다.**
 
-<img src="/images/2024-09-15-3-Logistic regression 1/image-20240915015200861.png" alt="image-20240915015200861" style="zoom:67%;" />
+<img src="https://cdn.jsdelivr.net/gh/gagyeomkim/gagyeomkim.github.io@master/images/2024-09-15-3-Logistic%20regression%201/image-20240915015200861.png" alt="image-20240915015200861" style="zoom:67%;" />
 
 logistic regression algorithm에 적용하기 위해 **Sigmoid** **function**(시그모이드 함수)라는 중요한 함수가 존재한다.
 
@@ -133,7 +133,7 @@ $z$값이 $0$일때는 $0.5$의 값을 가진다.
 
 이제 이 함수를 이용해 Logisitc regression 알고리즘을 구축해보자.
 
-![image-20240915015230445](/images/2024-09-15-3-Logistic regression 1/image-20240915015230445.png)
+![image-20240915015230445](https://cdn.jsdelivr.net/gh/gagyeomkim/gagyeomkim.github.io@master/images/2024-09-15-3-Logistic%20regression%201/image-20240915015230445.png)
 
 linear regression function과 같은 직선함수는 w와 x의 dot product와 b의 합으로 정의할 수 있었다.
 
@@ -147,25 +147,25 @@ $$g(z)=\\frac{1}{1+e^{-(\\vec{w} \\cdot \\vec{x}+b)}}$$
 
 또한, logistic regression의 hypothesis로 g(z)를 사용하므로 $ f(x) = g(z)$ 라고도 나타낼 수 있다.
 
-<img src="/images/2024-09-15-3-Logistic regression 1/image-20240915015251370.png" alt="image-20240915015251370" style="zoom:50%;" />
+<img src="https://cdn.jsdelivr.net/gh/gagyeomkim/gagyeomkim.github.io@master/images/2024-09-15-3-Logistic%20regression%201/image-20240915015251370.png" alt="image-20240915015251370" style="zoom:50%;" />
 
 이 model이 logistic regression model이다.
 
-![image-20240915015330282](/images/2024-09-15-3-Logistic regression 1/image-20240915015330282.png)
+![image-20240915015330282](https://cdn.jsdelivr.net/gh/gagyeomkim/gagyeomkim.github.io@master/images/2024-09-15-3-Logistic%20regression%201/image-20240915015330282.png)
 
 logistic regression의 Hypothesis의 출력값은 **특정 input x에 대해** **y(class)가 1이 될 확률**을 의미한다.
 
-<img src="/images/2024-09-15-3-Logistic regression 1/image-20240915015341643.png" alt="image-20240915015341643" style="zoom: 50%;" />
+<img src="https://cdn.jsdelivr.net/gh/gagyeomkim/gagyeomkim.github.io@master/images/2024-09-15-3-Logistic%20regression%201/image-20240915015341643.png" alt="image-20240915015341643" style="zoom: 50%;" />
 
 예를 들어 악성 종양인지를 구분하는 예제에서 output이 0.7이라면, 악성으로 판명될 확률(y=1일 확률)이 70%라고 생각할 수 있다.
 
-<img src="/images/2024-09-15-3-Logistic regression 1/image-20240915015400691.png" alt="image-20240915015400691" style="zoom:50%;" />
+<img src="https://cdn.jsdelivr.net/gh/gagyeomkim/gagyeomkim.github.io@master/images/2024-09-15-3-Logistic%20regression%201/image-20240915015400691.png" alt="image-20240915015400691" style="zoom:50%;" />
 
 y의 output은 0또는 1이되어야만 하기에, y=0일 확률과 y=1일 확률의 합은 1이 된다. 따라서, y=0일 확률은 0.3임도 알 수 있다.
 
  logistic regression의 표기법은 아래와 같이 사용한다.
 
-<img src="/images/2024-09-15-3-Logistic regression 1/image-20240915015415897.png" alt="image-20240915015415897" style="zoom:50%;" />
+<img src="https://cdn.jsdelivr.net/gh/gagyeomkim/gagyeomkim.github.io@master/images/2024-09-15-3-Logistic%20regression%201/image-20240915015415897.png" alt="image-20240915015415897" style="zoom:50%;" />
 
 세미콜론 \`;\`을 통해 input feature x에서 y가 1이 될 확률에 영향을 미치는 파라미터를 구분할 수 있다.  
 
@@ -173,7 +173,7 @@ y의 output은 0또는 1이되어야만 하기에, y=0일 확률과 y=1일 확�
 
 ## **Decision boundary**
 
-![image-20240915015442709](/images/2024-09-15-3-Logistic regression 1/image-20240915015442709.png)
+![image-20240915015442709](https://cdn.jsdelivr.net/gh/gagyeomkim/gagyeomkim.github.io@master/images/2024-09-15-3-Logistic%20regression%201/image-20240915015442709.png)
 
 Logisitc regression의 Hypothesis의 출력값이 y가 1이될 확률을 나타내므로, 0.7 또는 0.3과 같은 값을 가지게 될 것이다.
 
@@ -189,7 +189,7 @@ Logisitc regression의 Hypothesis의 출력값이 y가 1이될 확률을 나타�
 
 그렇다, f(x)가 $0.5$ 이상일 때는 언제일까?
 
-![image-20240915015453447](/images/2024-09-15-3-Logistic regression 1/image-20240915015453447.png)
+![image-20240915015453447](https://cdn.jsdelivr.net/gh/gagyeomkim/gagyeomkim.github.io@master/images/2024-09-15-3-Logistic%20regression%201/image-20240915015453447.png)
 
 Logistic regression의 hypothesis는 Sigmoid function을 사용하므로 $f(x) = g(z)$로 나타낼 수 있다.
 
@@ -201,13 +201,13 @@ z는 위와 같이 $\\vec{w} \\cdot \\vec{x}+b$로 나타낼 수 있으므로, $
 
 두개의 feature가 있는 classification 문제의 예를들어보자.
 
-<img src="/images/2024-09-15-3-Logistic regression 1/image-20240915015525245.png" alt="image-20240915015525245" style="zoom: 67%;" />
+<img src="https://cdn.jsdelivr.net/gh/gagyeomkim/gagyeomkim.github.io@master/images/2024-09-15-3-Logistic%20regression%201/image-20240915015525245.png" alt="image-20240915015525245" style="zoom: 67%;" />
 
 X가 positive class, O가 negative class를나타내는 training set이다.
 
 즉, X는 y=1에, O은 y=0에 해당한다. 
 
-![image-20240915015709177](/images/2024-09-15-3-Logistic regression 1/image-20240915015709177.png)
+![image-20240915015709177](https://cdn.jsdelivr.net/gh/gagyeomkim/gagyeomkim.github.io@master/images/2024-09-15-3-Logistic%20regression%201/image-20240915015709177.png)
 
 위에서 배웠듯이, logistic regression에서는 $g(z)$를 사용해서 예측을 수행한다.
 
@@ -215,7 +215,7 @@ feature가 2개이므로 위와 같이 표현식을 잡을 수 있고,
 
 $w\_1$은 1, $w\_2$는 1, $b$는 -3이라고 가정해보자.
 
-<img src="/images/2024-09-15-3-Logistic regression 1/image-20240915015545780.png" alt="image-20240915015545780" style="zoom:67%;" />
+<img src="https://cdn.jsdelivr.net/gh/gagyeomkim/gagyeomkim.github.io@master/images/2024-09-15-3-Logistic%20regression%201/image-20240915015545780.png" alt="image-20240915015545780" style="zoom:67%;" />
 
 **$\\vec{w} \\cdot \\vec{x}+b=0$이 되는 경우** y=1인지 y=0인지에 대해 중립적인 위치(즉, 확률이 0.5인경우 ; z=0인 경우 sigmoid function의 output은 0.5)를 가지게 되며, 이 경우들을 모아서 나타낸 선을 _**Decision boundary**_라고 부른다.
 
@@ -231,13 +231,13 @@ $x\_1+x\_2=3$을 만족하는 경우를 나타낸 보라색 선이 Decision boun
 
 ### \- Non-linear decision boundaries
 
-![image-20240915015641127](/images/2024-09-15-3-Logistic regression 1/image-20240915015641127.png)
+![image-20240915015641127](https://cdn.jsdelivr.net/gh/gagyeomkim/gagyeomkim.github.io@master/images/2024-09-15-3-Logistic%20regression%201/image-20240915015641127.png)
 
 logisitc regression에서도 polynomials(다항식)을 사용할 수 있다.
 
 decision boundary를 결정짓는 원리(z=0인 지점)는 같으며, 더욱 복잡한 decision boundary를 만들 수 있다.
 
-![image-20240915015627372](/images/2024-09-15-3-Logistic regression 1/image-20240915015627372.png)
+![image-20240915015627372](https://cdn.jsdelivr.net/gh/gagyeomkim/gagyeomkim.github.io@master/images/2024-09-15-3-Logistic%20regression%201/image-20240915015627372.png)
 
 또한, feature의 dimension(차수)을 더 늘리면 훨씬 더 복잡한 decision boundary를 만들 수 있다. 
 

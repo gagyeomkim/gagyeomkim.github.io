@@ -10,7 +10,7 @@ typora-root-url: ../
 
 ## Linear Regression Model(선형 회귀 모델)
 
-![image-20240914185954408](/images/2024-09-14-2-Linear Regression&CostFunction/image-20240914185954408.png)
+![image-20240914185954408](https://cdn.jsdelivr.net/gh/gagyeomkim/gagyeomkim.github.io@master/images/2024-09-14-2-Linear%20Regression%26CostFunction/image-20240914185931200.png)
 
 위 그래프는 주택 size에 따른 주택 price의 그래프를 나타낸 것이다.
 
@@ -26,7 +26,7 @@ data set에는 모든 주택에 대한 price(정답)가 나와있다.
 
 Output으로 무한히 가능한 많은 숫자를 예측하기에, 위와 같은 모델을 Regression model이라고한다.
 
-![image-20240914190028062](/images/2024-09-14-2-Linear Regression&CostFunction/image-20240914190028062.png)
+![image-20240914190028062](https://cdn.jsdelivr.net/gh/gagyeomkim/gagyeomkim.github.io@master/images/2024-09-14-2-Linear%20Regression%26CostFunction/image-20240914185954408.png)
 
 또한, 위와 같이 도표로 시각화하는 것외에도 표를 통해서도 시각화할 수 있다.
 
@@ -46,7 +46,7 @@ Output으로 무한히 가능한 많은 숫자를 예측하기에, 위와 같은
 
 출력값을 예측하기 위해서는 먼저 Training set을 통해서 학습하도록 모델을 훈련시켜야한다.
 
-<img src="/images/2024-09-14-2-Linear Regression&CostFunction/image-20240914190056176.png" alt="image-20240914190056176" style="zoom:67%;" />
+<img src="https://cdn.jsdelivr.net/gh/gagyeomkim/gagyeomkim.github.io@master/images/2024-09-14-2-Linear%20Regression%26CostFunction/image-20240914190028062.png" style="zoom:67%;" />
 
 - $x$= "**input"** variable(입력변수) or "**feature"**(특징)
 - $y$ = "**output"** variable(출력 변수) or "**target"** variable(목표 변수)
@@ -58,7 +58,7 @@ Output으로 무한히 가능한 많은 숫자를 예측하기에, 위와 같은
 
 이제 Training set을 이용하여 Supervised Learning의 작동방식을 살펴보자.
 
-<img src="/images/2024-09-14-2-Linear Regression&CostFunction/image-20240914190117223.png" alt="image-20240914190117223" style="zoom:50%;" />
+<img src="https://cdn.jsdelivr.net/gh/gagyeomkim/gagyeomkim.github.io@master/images/2024-09-14-2-Linear%20Regression%26CostFunction/image-20240914190056176.png" style="zoom:50%;" />
 
 먼저, 입력(features)과 출력(targets)를 모두 포함하는 Training set을 학습 알고리즘에 공급한다.
 
@@ -146,7 +146,7 @@ Linear function(선형함수)은 비교적 단순하고 다루기 쉬우므로, 
 
 ## Cost Function(비용함수)
 
-<img src="/images/2024-09-14-2-Linear Regression&CostFunction/image-20240914190400864.png" alt="image-20240914190400864" style="zoom: 50%;" />
+<img src="https://cdn.jsdelivr.net/gh/gagyeomkim/gagyeomkim.github.io@master/images/2024-09-14-2-Linear%20Regression%26CostFunction/image-20240914190056176.png" style="zoom: 50%;" />
 
 위 사진은 이전에 보았던 features(입력) x와 targets(출력) y를 포함하는 훈련세트이다.
 
@@ -164,7 +164,7 @@ $$f_{w,b}(x) = wx+b$$
 
 파라미터 $w$와 $b$는 **계수**(**coefficients**) 또는 **가중치**(**weights**)라고 부르기도 한다.
 
-<img src="/images/2024-09-14-2-Linear Regression&CostFunction/image-20240914190434698.png" alt="image-20240914190434698" style="zoom: 50%;" />
+<img src="https://cdn.jsdelivr.net/gh/gagyeomkim/gagyeomkim.github.io@master/images/2024-09-14-2-Linear%20Regression%26CostFunction/image-20240914190434698.png" style="zoom: 50%;" />
 
 함수 f에서 얻은 직선은 위와 같이 파라미터 $w$와 $b$의 값에 따라 다른 형태를 가지게 된다.
 
@@ -175,7 +175,7 @@ $$f_{w,b}(x) = wx+b$$
 - $w$: 선의 기울기(slope)
 - $b$: y절편(y-intercept)
 
-<img src="/images/2024-09-14-2-Linear Regression&CostFunction/image-20240914190500435.png" alt="image-20240914190500435" style="zoom:50%;" />
+<img src="https://cdn.jsdelivr.net/gh/gagyeomkim/gagyeomkim.github.io@master/images/2024-09-14-2-Linear%20Regression%26CostFunction/image-20240914190500435.png" style="zoom:50%;" />
 
 >  $y^{(i)}$은 target을 뜻한다.
 
@@ -257,7 +257,7 @@ $$  minimize\,J(w,b) $$
 
 <br>
 
-![image-20240914190725108](/images/2024-09-14-2-Linear Regression&CostFunction/image-20240914190725108.png)
+![image-20240914190725108](https://cdn.jsdelivr.net/gh/gagyeomkim/gagyeomkim.github.io@master/images/2024-09-14-2-Linear%20Regression%26CostFunction/image-20240914190725108.png)
 
 cost function J를 잘 시각화 하기위해 오른쪽 사진과 같이 단순화된 버전을 이용해보자.
 
@@ -271,7 +271,7 @@ $$  minimize\,J(w) $$
 
 이제 몇가지 예제를 확인해서 cost function이 무슨일을 하고, 왜 사용해야하는지 확인해보자
 
-![image-20240914190758319](/images/2024-09-14-2-Linear Regression&CostFunction/image-20240914190758319.png)
+![image-20240914190758319](https://cdn.jsdelivr.net/gh/gagyeomkim/gagyeomkim.github.io@master/images/2024-09-14-2-Linear%20Regression%26CostFunction/image-20240914190758319.png)
 
 파라미터 **w가 고정된 경우, y의 추정값은 입력값 x에 따라서만 변화**하게 된다.
 
@@ -279,11 +279,11 @@ $$  minimize\,J(w) $$
 
 이 예시에서 w가 1이라고 가정하면, cost function J는 0이 되며, 이는 오른쪽 그래프에 하나의 점으로 나타낼 수 있다.
 
-<img src="/images/2024-09-14-2-Linear Regression&CostFunction/image-20240914190827711.png" alt="image-20240914190827711" style="zoom:50%;" />
+<img src="https://cdn.jsdelivr.net/gh/gagyeomkim/gagyeomkim.github.io@master/images/2024-09-14-2-Linear%20Regression%26CostFunction/image-20240914190827711.png" style="zoom:50%;" />
 
 w가 0.5일때를 계산해보면 cost function이 0.58 정도의 값을 가지며, 오른쪽과 같이 하나의 점으로 나타낼 수 있다.
 
-<img src="/images/2024-09-14-2-Linear Regression&CostFunction/image-20240914190845835.png" alt="image-20240914190845835" style="zoom: 50%;" />
+<img src="https://cdn.jsdelivr.net/gh/gagyeomkim/gagyeomkim.github.io@master/images/2024-09-14-2-Linear%20Regression%26CostFunction/image-20240914190845835.png" style="zoom: 50%;" />
 
 이처럼 w의 각 값에 대해서 대응되는 $J(w)$가 생성되며, 이 점들을 이용해서 오른쪽과 같은 그래프를 그릴 수 있다.
 
@@ -295,19 +295,19 @@ w가 0.5일때를 계산해보면 cost function이 0.58 정도의 값을 가지�
 
 위의 예시에서는 단순화를 위해 b를 0으로 설정했었기에, 아래와 같은 그래프의 cost가 나왔었다.
 
-<img src="/images/2024-09-14-2-Linear Regression&CostFunction/image-20240914190915270.png" alt="image-20240914190915270" style="zoom:50%;" />
+<img src="https://cdn.jsdelivr.net/gh/gagyeomkim/gagyeomkim.github.io@master/images/2024-09-14-2-Linear%20Regression%26CostFunction/image-20240914190915270.png" style="zoom:50%;" />
 
 이제 파라미터가 w,b로 두개가 되었고, 이전보다 Cost function J의 그래프는 더욱 복잡해 질 것이다. 마찬가지로 포물선의 형태를 띄고 있을 테지만 아래와 같이 3차원 그래프로 나타낼 수 있을 것이다.
 
-<img src="/images/2024-09-14-2-Linear Regression&CostFunction/image-20240914190947419.png" alt="image-20240914190947419" style="zoom: 50%;" />
+<img src="https://cdn.jsdelivr.net/gh/gagyeomkim/gagyeomkim.github.io@master/images/2024-09-14-2-Linear%20Regression%26CostFunction/image-20240914190947419.png" style="zoom: 50%;" />
 
 높이에 따라 cost function이 나타나므로, **그래프 표면의 어떤 한 점이 특정한 값(cost)**를 가지게 된다.
 
-![image-20240914191010702](/images/2024-09-14-2-Linear Regression&CostFunction/image-20240914191010702.png)
+![image-20240914191010702](https://cdn.jsdelivr.net/gh/gagyeomkim/gagyeomkim.github.io@master/images/2024-09-14-2-Linear%20Regression%26CostFunction/image-20240914191010702.png)
 
 이런 cost function을 더 편리하게 도표화하기 위해서, 3차원 표면도를 사용하는 대신 등고선 그래프(Contour plot)를 이용하는 방법이 있다.
 
-![image-20240914191025980](/images/2024-09-14-2-Linear Regression&CostFunction/image-20240914191025980.png)
+![image-20240914191025980](https://cdn.jsdelivr.net/gh/gagyeomkim/gagyeomkim.github.io@master/images/2024-09-14-2-Linear%20Regression%26CostFunction/image-20240914191025980.png)
 
 Contour plot을 만드는 방법은 3d 표면을 수평으로 자르는 것이며, 자른 조각들은 Contour plot의 타원 중 하나로 표시된다.
 
@@ -319,7 +319,7 @@ Contour plot을 만드는 방법은 3d 표면을 수평으로 자르는 것이�
 
 시각화 예제를 조금 더 살펴보자
 
-![image-20240914191042728](/images/2024-09-14-2-Linear Regression&CostFunction/image-20240914191042728.png)
+![image-20240914191042728](https://cdn.jsdelivr.net/gh/gagyeomkim/gagyeomkim.github.io@master/images/2024-09-14-2-Linear%20Regression%26CostFunction/image-20240914191042728.png)
 
 $b=800, w= -0.15$로 잡으면, 오른쪽 그래프에 하나의 점으로 표시할 수 있다. dataset을 살펴보면, training data에 있는 실제 **target**값과는 상당히 다르므로, Contour plot에서 해당지점의 cost가 최솟값(타원 중심)과는 거리가 먼 것을 확인할 수 있다.
 
@@ -329,7 +329,7 @@ $b=800, w= -0.15$로 잡으면, 오른쪽 그래프에 하나의 점으로 표�
 
 즉, 위의 Hypothesis가 좋은 Hypothesis가 아니라는 것을 알 수 있다.
 
-![image-20240914191113725](/images/2024-09-14-2-Linear Regression&CostFunction/image-20240914191113725.png)
+![image-20240914191113725](https://cdn.jsdelivr.net/gh/gagyeomkim/gagyeomkim.github.io@master/images/2024-09-14-2-Linear%20Regression%26CostFunction/image-20240914191113725.png)
 
 위 그래프는 cost의 최솟값 지점과 인접하므로 적합한 Hypothesis라고 예상할 수 있고, Training set과 비슷한 형태인 것을 확인할 수 있다.
 

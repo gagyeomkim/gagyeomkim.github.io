@@ -16,7 +16,7 @@ typora-root-url: ../
 
 이처럼 **input feature가 여러 개 있는 유형의 linear regression model**을 **Multiple Linear Regression(다중 선형회귀)**라고 부른다.
 
-![image-20240915010520908](/images/2024-09-15-2-Multiple Linear Regression/image-20240915010520908.png)
+![image-20240915010520908](https://cdn.jsdelivr.net/gh/gagyeomkim/gagyeomkim.github.io@master/images/2024-09-15-2-Multiple%20Linear%20Regression/image-20240915010520908.png)
 
 위의 사진은 Multiple features의 예를 든 사진이다.
 
@@ -26,7 +26,7 @@ typora-root-url: ../
 
 즉,  $x\_j^{(i)}$는 \`i\`번째 training example의 \`j\`번째 feature를 의미한다.
 
-<img src="/images/2024-09-15-2-Multiple Linear Regression/image-20240915010630665.png" alt="image-20240915010630665" style="zoom:50%;" />
+<img src="https://cdn.jsdelivr.net/gh/gagyeomkim/gagyeomkim.github.io@master/images/2024-09-15-2-Multiple%20Linear%20Regression/image-20240915010630665.png" style="zoom:50%;" />
 
 위의 사진은 행 벡터를 나타낸다.
 
@@ -48,7 +48,7 @@ $$Previously:  f\_{w,b}(x) = wx+b$$
 
 하지만, Multiple feature을 이용할 때는 아래와 같이 다르게 정의한다. 
 
-![image-20240915010701077](/images/2024-09-15-2-Multiple Linear Regression/image-20240915010701077.png)
+![image-20240915010701077](https://cdn.jsdelivr.net/gh/gagyeomkim/gagyeomkim.github.io@master/images/2024-09-15-2-Multiple%20Linear%20Regression/image-20240915010701077.png)
 
 <img src="/images/2024-09-15-2-Multiple Linear Regression/image-20240915010726613.png" alt="image-20240915010726613" style="zoom:50%;" />
 
@@ -56,7 +56,7 @@ $$Previously:  f\_{w,b}(x) = wx+b$$
 
 이 표현식을 표기법을 이용하여 좀 더 살펴보자
 
-<img src="/images/2024-09-15-2-Multiple Linear Regression/image-20240915010742024.png" alt="image-20240915010742024" style="zoom:67%;" />
+<img src="https://cdn.jsdelivr.net/gh/gagyeomkim/gagyeomkim.github.io@master/images/2024-09-15-2-Multiple%20Linear%20Regression/image-20240915010742024.png" style="zoom:67%;" />
 
 우선,  $w\_1,w\_2,w\_3$부터 $w\_n$까지의 숫자목록을 의미하는 행 벡터를 정의해보자.
 
@@ -64,13 +64,13 @@ $$Previously:  f\_{w,b}(x) = wx+b$$
 
 X또한 행벡터로 작성해보자.
 
-![image-20240915010756404](/images/2024-09-15-2-Multiple Linear Regression/image-20240915010756404.png)
+![image-20240915010756404](https://cdn.jsdelivr.net/gh/gagyeomkim/gagyeomkim.github.io@master/images/2024-09-15-2-Multiple%20Linear%20Regression/image-20240915010756404.png)
 
 이렇게 하면 model을 아래와 같이 **vector의 dot product(내적)와 숫자 b를 더한 것**으로 간결하게 작성할수 있다.
 
 목록으로 구성된 두 vector의 dot product는 서로 대응하는(index가 같은) 숫자 쌍을 확인하며 계산된다.  
 
-![image-20240915010818638](/images/2024-09-15-2-Multiple Linear Regression/image-20240915010818638.png)
+![image-20240915010818638](https://cdn.jsdelivr.net/gh/gagyeomkim/gagyeomkim.github.io@master/images/2024-09-15-2-Multiple%20Linear%20Regression/image-20240915010818638.png)
 
 이처럼 dot product 표기법을 사용하면 더 적은 수의 문자를 사용하여 더 간결하게 모델을 작성할 수 있다.
 
@@ -82,7 +82,7 @@ X또한 행벡터로 작성해보자.
 
 ## Vectorization(벡터화)
 
-![image-20240915010834446](/images/2024-09-15-2-Multiple Linear Regression/image-20240915010834446.png)
+![image-20240915010834446](https://cdn.jsdelivr.net/gh/gagyeomkim/gagyeomkim.github.io@master/images/2024-09-15-2-Multiple%20Linear%20Regression/image-20240915010834446.png)
 
 \`np.dot\`은 벡터 w와 x사이의 수학적 dot product를 구현한 다음, b를 더할 수 있다.
 
@@ -90,7 +90,7 @@ X또한 행벡터로 작성해보자.
 
 $n$(number of features)이 늘어날 경우, 벡터화를 사용하지 않는 연산보다 훨씬 더 빠르게 실행된다.
 
-![image-20240915010932982](/images/2024-09-15-2-Multiple Linear Regression/image-20240915010932982.png)
+![image-20240915010932982](https://cdn.jsdelivr.net/gh/gagyeomkim/gagyeomkim.github.io@master/images/2024-09-15-2-Multiple%20Linear%20Regression/image-20240915010932982.png)
 
 예를들어, for 문을 사용하는 경우 계산을 순차적으로 한단계씩 계산하지만, 벡터화가 적용된 코드는 w와 x의 각 쌍을 동시에 **병렬적**으로 곱할 수 있다.
 
@@ -98,7 +98,7 @@ $n$(number of features)이 늘어날 경우, 벡터화를 사용하지 않는 �
 
 Multiple linear regression에서는 이것이 어떻게 도움이 될까? 
 
-![image-20240915010950118](/images/2024-09-15-2-Multiple Linear Regression/image-20240915010950118.png)
+![image-20240915010950118](https://cdn.jsdelivr.net/gh/gagyeomkim/gagyeomkim.github.io@master/images/2024-09-15-2-Multiple%20Linear%20Regression/image-20240915010950118.png)
 
 단순화를 위해 parameter b를 무시하고 계산을 진행해보자.
 
@@ -114,14 +114,14 @@ vectorization에서는 병렬처리 하드웨어를 사용하여 한번에 param
 
 우선 벡터화를 사용하면 Vector 표기법을 사용하여 더 간결하게 작성할 수 있다.
 
-![image-20240915011032641](/images/2024-09-15-2-Multiple Linear Regression/image-20240915011032641.png)
+![image-20240915011032641](https://cdn.jsdelivr.net/gh/gagyeomkim/gagyeomkim.github.io@master/images/2024-09-15-2-Multiple%20Linear%20Regression/image-20240915011032641.png)
 
 -   Parameters : w를 별도의 여러 개의 파라미터로 생각하지 않고 $\\vec {w}$처럼 벡터로 모은다. $\\vec {w}$의 길이는 n이된다.
 -   model : dot product(내적)을 이용하여 model을 update 했다.
 -   Cost Function: 여러개의 w 파라미터로 생각하는 대신 $\\vec{w}$ 로 대체했다.
 -   Gradient descent : 마찬가지로 J의 파라미터 부분을 벡터로 대체했다.
 
-![image-20240915011102277](/images/2024-09-15-2-Multiple Linear Regression/image-20240915011102277.png)
+![image-20240915011102277](https://cdn.jsdelivr.net/gh/gagyeomkim/gagyeomkim.github.io@master/images/2024-09-15-2-Multiple%20Linear%20Regression/image-20240915011102277.png)
 
 Gradient descent의 경우에는 1개의 feature만을 가질 때와 n개의 feature을 가질 때 표현식이 달라진다.
 
@@ -135,7 +135,7 @@ error에 관련된 항은 여전히 $f$에서 target value y를 뺀 값을 취�
 
 ---
 
-![image-20240915011133429](/images/2024-09-15-2-Multiple Linear Regression/image-20240915011133429.png)
+![image-20240915011133429](https://cdn.jsdelivr.net/gh/gagyeomkim/gagyeomkim.github.io@master/images/2024-09-15-2-Multiple%20Linear%20Regression/image-20240915011133429.png)
 
 gradient descent를 사용하는 것 외에도 linear regression에서만 사용되는 w와 b를 찾는 **Normal equation**이라는 방법도 존재한다.
 
@@ -147,7 +147,7 @@ gradient descent를 사용하는 것 외에도 linear regression에서만 사용
 
 feature의 값의 범위가 얼마나 큰지와 해당 feature에 곱해지는 파라미터의 크기 사이의 관계에 대해서 살펴보자.
 
-![image-20240915011149063](/images/2024-09-15-2-Multiple Linear Regression/image-20240915011149063.png)
+![image-20240915011149063](https://cdn.jsdelivr.net/gh/gagyeomkim/gagyeomkim.github.io@master/images/2024-09-15-2-Multiple%20Linear%20Regression/image-20240915011149063.png)
 
 feature $x\_1$은 집의 크기, $x\_2$는 침실의 개수라고 두고 price를 예측해보자.
 
@@ -159,7 +159,7 @@ $x\_1$ 의 범위는 300~2000, $x\_2$ 의 범위는 0~5라고 할 때, 각 featu
 
 scatter plot(산점도)와 contour plot(등고선도)으로 다시한번 살펴보자
 
-![image-20240915011209796](/images/2024-09-15-2-Multiple Linear Regression/image-20240915011209796.png)
+![image-20240915011209796](https://cdn.jsdelivr.net/gh/gagyeomkim/gagyeomkim.github.io@master/images/2024-09-15-2-Multiple%20Linear%20Regression/image-20240915011209796.png)
 
 > scatter plot에서 가로축의 배율이 세로축에 비해 훨씬 크고, 값의 범위 또한 넓다는 것을 알 수 있다.  
 > 또한, contour plot에서는 가로축에 비해 세로축의 범위가 훨씬 넓기에 찌그러진 타원의 모양을 가진다.
@@ -170,7 +170,7 @@ $w\_1$(size)은 범위가 큰 $x\_1$을 곱하기에 아주 조금만 변경하�
 
 $w\_2$은 범위가 작은 $x\_2$를 곱해서 조금만 변경하면 cost에 거의 영향을 미치지 않는다.(Contour plot에서는 타원의 중심에 다가갈 수록 cost가 최소가 된다.)
 
-![image-20240915011230088](/images/2024-09-15-2-Multiple Linear Regression/image-20240915011230088.png)
+![image-20240915011230088](https://cdn.jsdelivr.net/gh/gagyeomkim/gagyeomkim.github.io@master/images/2024-09-15-2-Multiple%20Linear%20Regression/image-20240915011230088.png)
 
 즉, **training set을 그대로 사용하면 위와 같이 global minimum에 도달할 때까지 오랜 시간이 걸릴 수 있다.**
 
@@ -180,13 +180,13 @@ $w\_2$은 범위가 작은 $x\_2$를 곱해서 조금만 변경하면 cost에 �
 
 즉 training set을 변형하여 feature scale을 0에서 1까지의 범위로 조정한다면,$x\_1$과 $x\_2$가 비슷한 범위의 값을 취하게 되어 global minimum에 더 빠르게 도달 할수 있게 된다.  
 
-![image-20240915011300985](/images/2024-09-15-2-Multiple Linear Regression/image-20240915011300985.png)
+![image-20240915011300985](https://cdn.jsdelivr.net/gh/gagyeomkim/gagyeomkim.github.io@master/images/2024-09-15-2-Multiple%20Linear%20Regression/image-20240915011300985.png)
 
 ---
 
 ### \- Feature scaling
 
-![image-20240915011314540](/images/2024-09-15-2-Multiple Linear Regression/image-20240915011314540.png)
+![image-20240915011314540](https://cdn.jsdelivr.net/gh/gagyeomkim/gagyeomkim.github.io@master/images/2024-09-15-2-Multiple%20Linear%20Regression/image-20240915011314540.png)
 
 Feature scaling의 기본적인 방법은 **범위의 최댓값으로 해당 feature을 나누는 것**이다. 
 
@@ -200,7 +200,7 @@ Feature scaling의 기본적인 방법은 **범위의 최댓값으로 해당 fea
 
 ### \- Mean normalization
 
-![image-20240915011340302](/images/2024-09-15-2-Multiple Linear Regression/image-20240915011340302-1726330422499-1.png)
+![image-20240915011340302](https://cdn.jsdelivr.net/gh/gagyeomkim/gagyeomkim.github.io@master/images/2024-09-15-2-Multiple%20Linear%20Regression/image-20240915011340302-1726330422499-1.png)
 
 최댓값으로 나누는 것 외에도, **Mean normalization(평균 정규화)**이라는 작업을 수행할수 있다.
 
@@ -218,13 +218,13 @@ Mean normalization으로 feature scaling을 진행하는 방법은 해당 featur
 
 ### \- Z-score normalization
 
-![image-20240915011359608](/images/2024-09-15-2-Multiple Linear Regression/image-20240915011359608.png)
+![image-20240915011359608](https://cdn.jsdelivr.net/gh/gagyeomkim/gagyeomkim.github.io@master/images/2024-09-15-2-Multiple%20Linear%20Regression/image-20240915011359608.png)
 
 $ \\sigma $(표준편차)를 이용한 Z-score normalization(Z-점수 정규화)방법도 존재한다.
 
 먼저, 평균 $ \\mu $를 계산하고, feature에서 $ \\mu\_j $를 뺀 다음, $\\sigma$로 나눠주는 것으로 feature scaling을 진행할 수 있다.
 
-![image-20240915011424301](/images/2024-09-15-2-Multiple Linear Regression/image-20240915011424301.png)
+![image-20240915011424301](https://cdn.jsdelivr.net/gh/gagyeomkim/gagyeomkim.github.io@master/images/2024-09-15-2-Multiple%20Linear%20Regression/image-20240915011424301.png)
 
 Feature scailing을 진행할 때는 **\-1 ~ 1까지 정도의 범위에서 지정하는 것**이 좋다.
 
@@ -238,13 +238,13 @@ gradient descent를 실행할 때 수렴 여부에 대해 어떻게 판단할 �
 
 주요 단계중 하나는 **learning rate $\\alpha$값을 선택하는 것**이다.
 
-<img src="./images/2024-09-15-2-Multiple Linear Regression/image-20240915011450295.png" alt="image-20240915011450295" style="zoom:67%;" />
+<img src="https://cdn.jsdelivr.net/gh/gagyeomkim/gagyeomkim.github.io@master/images/2024-09-15-2-Multiple%20Linear%20Regression/image-20240915011450295.png" alt="image-20240915011450295" style="zoom:67%;" />
 
 gradient descent의 역할은 cost function J를 최소화하는 파라미터 w와 b를 찾는 것임을 명심하자.
 
 적절하게 구현한다면, 매 iteration(반복)마다 cost function J의 값은 감소해야한다.
 
-![image-20240915011511238](/images/2024-09-15-2-Multiple Linear Regression/image-20240915011511238.png)
+![image-20240915011511238](https://cdn.jsdelivr.net/gh/gagyeomkim/gagyeomkim.github.io@master/images/2024-09-15-2-Multiple%20Linear%20Regression/image-20240915011511238.png)
 
 training set을 기반으로 계산되는 J를 각 iteration마다 plotting함으로써 gradient descent가 잘 작동하는지 확인할 수 있다.
 
@@ -264,7 +264,7 @@ training set을 기반으로 계산되는 J를 각 iteration마다 plotting함�
 
 ---
 
-<img src="/images/2024-09-15-2-Multiple Linear Regression/image-20240915011530215.png" alt="image-20240915011530215" style="zoom:67%;" />
+<img src="https://cdn.jsdelivr.net/gh/gagyeomkim/gagyeomkim.github.io@master/images/2024-09-15-2-Multiple%20Linear%20Regression/image-20240915011530215.png" alt="image-20240915011530215" style="zoom:67%;" />
 
 또한, Automatic convergence test(자동 수렴 테스트)를 사용할 수도 있다.
 
@@ -284,7 +284,7 @@ $\\epsilon$ 이라는 아주 작은 수를 임계점으로 두고, cost function
 
 또한, **꾸준하게 cost의 값이 증가할 때**도, 같은 경우를 의심해 볼 수 있다.
 
-![image-20240915011558826](/images/2024-09-15-2-Multiple Linear Regression/image-20240915011558826.png)
+![image-20240915011558826](https://cdn.jsdelivr.net/gh/gagyeomkim/gagyeomkim.github.io@master/images/2024-09-15-2-Multiple%20Linear%20Regression/image-20240915011558826.png)
 
 코드에 문제가 있는지 확인하기 위해서는, 충분히 작은 learning rate $\\alpha$를 설정하는 것이다.
 
@@ -294,7 +294,7 @@ $\\epsilon$ 이라는 아주 작은 수를 임계점으로 두고, cost function
 
 learning rate를 낮추는 것은 debugging을 위해서 자주 사용한다.
 
-![image-20240915011618559](/images/2024-09-15-2-Multiple Linear Regression/image-20240915011618559.png)
+![image-20240915011618559](https://cdn.jsdelivr.net/gh/gagyeomkim/gagyeomkim.github.io@master/images/2024-09-15-2-Multiple%20Linear%20Regression/image-20240915011618559.png)
 
  따라서, 수행시에는 다양한 범위의 learning rate를 적용시켜 보는 것이 좋다.
 
@@ -310,7 +310,7 @@ learning rate를 낮추는 것은 debugging을 위해서 자주 사용한다.
 
  이번에는 알고리즘에 적합한 feature를 간단하게 선택하거나 설계하는 방법을 살펴보겠다.
 
-![image-20240915011640468](/images/2024-09-15-2-Multiple Linear Regression/image-20240915011640468.png)
+![image-20240915011640468](https://cdn.jsdelivr.net/gh/gagyeomkim/gagyeomkim.github.io@master/images/2024-09-15-2-Multiple%20Linear%20Regression/image-20240915011640468.png)
 
 주택에 두가지 feature가 있다고 가정해보자
 
@@ -319,17 +319,17 @@ learning rate를 낮추는 것은 debugging을 위해서 자주 사용한다.
 
 두가지 feature가 있다면 , 아래와 같은 model을 만들 수 있다.
 
-<img src="/images/2024-09-15-2-Multiple Linear Regression/image-20240915011658395.png" alt="image-20240915011658395" style="zoom: 50%;" />
+<img src="https://cdn.jsdelivr.net/gh/gagyeomkim/gagyeomkim.github.io@master/images/2024-09-15-2-Multiple%20Linear%20Regression/image-20240915011658395.png" alt="image-20240915011658395" style="zoom: 50%;" />
 
 그러나, 이보다 model에서 feature 선택에 대한 효과적인 방법이 존재한다.
 
 area(면적)은 frontage x depth의 값과 같으므로, area(땅 넓이)를 기준으로 price를 예측하는 것이 너비나 깊이를 개별적으로 선택해서 예측하는 것보다 더 효과적임을 알 수 있다. area를 $x\_3$이라는 새로운 feature로 정의함으로써 더욱 정확한 예측을 이끌어 낼 수 있다.
 
-<img src="/images/2024-09-15-2-Multiple Linear Regression/image-20240915011741551.png" alt="image-20240915011741551" style="zoom: 67%;" />
+<img src="https://cdn.jsdelivr.net/gh/gagyeomkim/gagyeomkim.github.io@master/images/2024-09-15-2-Multiple%20Linear%20Regression/image-20240915011741551.png" alt="image-20240915011741551" style="zoom: 67%;" />
 
 즉, Feature engineering은 learning algorithm이 더 쉽게 정확한 예측을 할 수 있도록 문제에 대한 지식이나 직관을 사용해서 **원래 feature를 변환하거나 결합하여 새로운 feature를 설계하는 과정**이다.
 
-<img src="/images/2024-09-15-2-Multiple Linear Regression/image-20240915011757051.png" alt="image-20240915011757051" style="zoom:67%;" />
+<img src="https://cdn.jsdelivr.net/gh/gagyeomkim/gagyeomkim.github.io@master/images/2024-09-15-2-Multiple%20Linear%20Regression/image-20240915011757051.png" alt="image-20240915011757051" style="zoom:67%;" />
 
 ---
 
@@ -337,9 +337,9 @@ area(면적)은 frontage x depth의 값과 같으므로, area(땅 넓이)를 기
 
 Feature engineering을 통해서 직선 뿐 아니라 곡선, 비선형함수를 데이터에 맞출 수 있다.
 
-<img src="/images/2024-09-15-2-Multiple Linear Regression/image-20240915011819023.png" alt="image-20240915011819023" style="zoom:67%;" />
+<img src="https://cdn.jsdelivr.net/gh/gagyeomkim/gagyeomkim.github.io@master/images/2024-09-15-2-Multiple%20Linear%20Regression/image-20240915011819023.png" alt="image-20240915011819023" style="zoom:67%;" />
 
-<img src="/images/2024-09-15-2-Multiple Linear Regression/image-20240915011834057.png" alt="image-20240915011834057" style="zoom:67%;" />
+<img src="https://cdn.jsdelivr.net/gh/gagyeomkim/gagyeomkim.github.io@master/images/2024-09-15-2-Multiple%20Linear%20Regression/image-20240915011834057.png" alt="image-20240915011834057" style="zoom:67%;" />
 
 위와 같은 주택 data set이 있다고 가정해보자. 집의 크기에 따른 가격 그래프인데, 직선만으로는 이 데이터 집합을 잘 표현할 수 없다. 
 
@@ -353,13 +353,13 @@ Feature engineering을 통해서 직선 뿐 아니라 곡선, 비선형함수를
 
 이러한 경우에서는 $x^2$뿐 아니라 $x^3$이 있는 3차함수를 선택할 수도 있다. 3차함수는 크기가 결국 다시 커지기 때문에 데이터에 더 잘맞는 곡선을 fitting할 수 있다.
 
-![image-20240915011854821](/images/2024-09-15-2-Multiple Linear Regression/image-20240915011854821.png)
+![image-20240915011854821](https://cdn.jsdelivr.net/gh/gagyeomkim/gagyeomkim.github.io@master/images/2024-09-15-2-Multiple%20Linear%20Regression/image-20240915011854821.png)
 
 **단,** 해당 예시처럼 원래 feature의 제곱처럼 **feature를 거듭제곱하여 새로운 feature를 만들게 되면, feature scaling이 매우 중요해지게된다.** 원래 feature의 범위에 제곱을 취하기 때문에 새롭게 설계된 feature는 **원래 feature과 매우 다른 값의 범위**를 취하게 된다. 
 
 따라서 feature scaling을 적용하여 비교가능한 범위 내로 바꾸어주어야한다.
 
-![image-20240915011912807](/images/2024-09-15-2-Multiple Linear Regression/image-20240915011912807.png)
+![image-20240915011912807](https://cdn.jsdelivr.net/gh/gagyeomkim/gagyeomkim.github.io@master/images/2024-09-15-2-Multiple%20Linear%20Regression/image-20240915011912807.png)
 
 또 다른 방법으로 x의 제곱근을 사용하는 방법도 있다.
 

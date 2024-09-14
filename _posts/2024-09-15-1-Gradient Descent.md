@@ -42,7 +42,7 @@ Gradient Descent 알고리즘은 다음과 같은 방법으로 진행된다.
 
 **활모양이나 해먹모양이 아닌 일부 함수 J의 경우 최솟값이 두 개 이상일 수 있다**는 점을 주의하자.
 
-![image-20240915003917149](/images/2024-09-15-1-Gradient Descent/image-20240915003917149.png)
+![image-20240915003917149](https://cdn.jsdelivr.net/gh/gagyeomkim/gagyeomkim.github.io@master/images/2024-09-15-1-Gradient%20Descent/image-20240915003917149.png)
 
 위의 사진은 신경망 모델을 훈련시킬 때 얻을 수 있는 일종의 Cost Function이다.
 
@@ -68,7 +68,7 @@ Gradient Descent 알고리즘은 다음과 같은 방법으로 진행된다.
 
 ### - Gradient Descent algorithm
 
-![image-20240915004011213](/images/2024-09-15-1-Gradient Descent/image-20240915004011213.png)
+![image-20240915004011213](https://cdn.jsdelivr.net/gh/gagyeomkim/gagyeomkim.github.io@master/images/2024-09-15-1-Gradient%20Descent/image-20240915004011213.png)
 
 Gradient descent algorithm을 수학적으로 정의하면 위와 같다.
 
@@ -108,7 +108,7 @@ gradient descent 알고리즘의 경우, **수렴(convergence)할 때까지 위�
 
 따라서 왼쪽의 예시처럼 **동시에 update**를 해주어야한다.
 
-![image-20240915004107233](/images/2024-09-15-1-Gradient Descent/image-20240915004107233.png)
+![image-20240915004107233](https://cdn.jsdelivr.net/gh/gagyeomkim/gagyeomkim.github.io@master/images/2024-09-15-1-Gradient%20Descent/image-20240915004107233.png)
 
 ------
 
@@ -116,13 +116,13 @@ gradient descent 알고리즘의 경우, **수렴(convergence)할 때까지 위�
 
 gradient descent가 어떤 역할을 하는지, 왜 의미가 있는지 알아보자
 
-![image-20240915004122957](/images/2024-09-15-1-Gradient Descent/image-20240915004122957.png)
+![image-20240915004122957](https://cdn.jsdelivr.net/gh/gagyeomkim/gagyeomkim.github.io@master/images/2024-09-15-1-Gradient%20Descent/image-20240915004122957.png)
 
 먼저, 오른쪽처럼 파라미터 1개만 사용하는 예시로 단순화해서 알아보자
 
 단순화시 $w$는 오른쪽과 같은 표현식을 얻게 된다.
 
-![image-20240915004133778](/images/2024-09-15-1-Gradient Descent/image-20240915004133778.png)
+![image-20240915004133778](https://cdn.jsdelivr.net/gh/gagyeomkim/gagyeomkim.github.io@master/images/2024-09-15-1-Gradient%20Descent/image-20240915004133778.png)
 
 $\frac{\partial}{\partial w}J(w,b)$는 $w$에 대해 $J(w)$에 편미분을 취한 편도함수이다.
 
@@ -132,7 +132,7 @@ $\frac{\partial}{\partial w}J(w,b)$는 $w$에 대해 $J(w)$에 편미분을 취�
 
 learning rate는 항상 양수(positive number)의 값을 가지므로 미분 계수가 양수이면, w는 기존의 값보다 더 작은 값으로 update된다.
 
-![image-20240915004603298](/images/2024-09-15-1-Gradient Descent/image-20240915004603298.png)
+![image-20240915004603298](https://cdn.jsdelivr.net/gh/gagyeomkim/gagyeomkim.github.io@master/images/2024-09-15-1-Gradient%20Descent/image-20240915004603298.png)
 
 반면, **미분 계수가 음수(negative number)**라면 w는 기존의 값보다 더 큰 값으로 update된다.
 
@@ -148,15 +148,15 @@ learning rate는 항상 양수(positive number)의 값을 가지므로 미분 �
 
 Learning Rate에 대한 선택은 gradient descent 구현의 효율성에 큰 영향을 미친다.
 
-![image-20240915004200162](/images/2024-09-15-1-Gradient Descent/image-20240915004200162.png)
+![image-20240915004200162](https://cdn.jsdelivr.net/gh/gagyeomkim/gagyeomkim.github.io@master/images/2024-09-15-1-Gradient%20Descent/image-20240915004200162.png)
 
 Learning Rate가 너무 작다면 수렴(Convergence)하는데에 매우 느리고, 너무 크다면 최솟값에 이르지 못해 수렴하지 못하거나 발산(diverge)하는 문제가 발생할 수 있다. 따라서 적절한 Learning rate를 선택하는 것은 매우 중요하다.
 
-![image-20240915004211413](/images/2024-09-15-1-Gradient Descent/image-20240915004211413.png)
+![image-20240915004211413](https://cdn.jsdelivr.net/gh/gagyeomkim/gagyeomkim.github.io@master/images/2024-09-15-1-Gradient%20Descent/image-20240915004211413.png)
 
 파라미터를 통해 local minimum에 도달했다면, 미분계수 $\frac{\partial}{\partial b}J(w,b)$의 값이 0이 나오기 때문에, **파라미터는 더 이상 update 되지 않으며, 값을 유지하게 된다.**
 
-![image-20240915004229727](/images/2024-09-15-1-Gradient Descent/image-20240915004229727.png)
+![image-20240915004229727](https://cdn.jsdelivr.net/gh/gagyeomkim/gagyeomkim.github.io@master/images/2024-09-15-1-Gradient%20Descent/image-20240915004229727.png)
 
 또한, learning rate가 특정한 값으로 고정되었어도, gradient descent 알고리즘은 local minimum에 도달할 수 있다.
 
@@ -181,13 +181,13 @@ Learning Rate가 너무 작다면 수렴(Convergence)하는데에 매우 느리�
 
 이제 gradient descent를 linear regression에 적용해보자
 
-![image-20240915004250743](/images/2024-09-15-1-Gradient Descent/image-20240915004250743.png)
+![image-20240915004250743](https://cdn.jsdelivr.net/gh/gagyeomkim/gagyeomkim.github.io@master/images/2024-09-15-1-Gradient%20Descent/image-20240915004250743.png)
 
 Gradient Descent algorithm에서 w와 b에 대한 미분계수를 오른쪽과 같은 식으로 바꿔쓸 수 있다.
 
 해당 식은 편미분을 사용해서 도출된다.
 
-![image-20240915004304599](/images/2024-09-15-1-Gradient Descent/image-20240915004304599.png)
+![image-20240915004304599](https://cdn.jsdelivr.net/gh/gagyeomkim/gagyeomkim.github.io@master/images/2024-09-15-1-Gradient%20Descent/image-20240915004304599.png)
 
 $\frac{\partial}{\partial w}J(w,b)$의 경우, J(w,b)는 아래의 식과 같음을 확인했고, 이를 해당 식에 대입한다.
 
@@ -199,7 +199,7 @@ $\frac{\partial}{\partial w}J(w,b)$의 경우, J(w,b)는 아래의 식과 같음
 
 $\frac{\partial}{\partial b}J(w,b)$의 경우에는 b에 대한 편미분을 진행하며, b외의 변수는 모두 상수 취급하여 속미분시 없어지게 된다. b에는 곱해진게 아무것도 없었기에 2만이 곱해지게 된다.(마찬가지로 분모의 2와 약분된다.)
 
-![image-20240915004347486](/images/2024-09-15-1-Gradient Descent/image-20240915004347486.png)
+![image-20240915004347486](https://cdn.jsdelivr.net/gh/gagyeomkim/gagyeomkim.github.io@master/images/2024-09-15-1-Gradient%20Descent/image-20240915004347486.png)
 
 이후 정리된 해당 식을 통해서 수렴할 때까지 w와 b를 반복적으로, 동시에 update 해주어야한다.
 
@@ -209,17 +209,17 @@ gradient descent의 문제점 중 하나는 global minimum대신 local minimum�
 
 **global minimum**은 cost function J의 **모든 점 중 가장 최소의 값을 갖는 점**을 의미한다.
 
-![image-20240915004408253](/images/2024-09-15-1-Gradient Descent/image-20240915004408253.png)
+![image-20240915004408253](https://cdn.jsdelivr.net/gh/gagyeomkim/gagyeomkim.github.io@master/images/2024-09-15-1-Gradient%20Descent/image-20240915004408253.png)
 
 하지만, linear regression의 제곱 오차 비용함수는 local minimum을 여러 개 가지지 않으며, covex function(볼록함수)이기 때문에 **오직 단 하나의 global minimum만을 가진다.**
 
 convex function에 gradient descent를 구현할 때 유용한 특성 중 하나는 **learning rate를 적절하게 선택하기만 하면 항상 global minimum으로 수렴**한다는 것이다.
 
-![image-20240915004426911](/images/2024-09-15-1-Gradient Descent/image-20240915004426911.png)
+![image-20240915004426911](https://cdn.jsdelivr.net/gh/gagyeomkim/gagyeomkim.github.io@master/images/2024-09-15-1-Gradient%20Descent/image-20240915004426911.png)
 
 즉, 적절하게 규칙을 따라서 알고리즘을 진행하면 결국 최솟값에 도달하게 된다.
 
-![image-20240915004438813](/images/2024-09-15-1-Gradient Descent/image-20240915004438813.png)
+![image-20240915004438813](https://cdn.jsdelivr.net/gh/gagyeomkim/gagyeomkim.github.io@master/images/2024-09-15-1-Gradient%20Descent/image-20240915004438813.png)
 
 ------
 
@@ -233,4 +233,4 @@ convex function에 gradient descent를 구현할 때 유용한 특성 중 하나
 
 > 물론, 모든 data set을 사용하지 않고 더 작은 하위 집합(subsets)을 살펴보는 gradient descent도 존재하지만, linear regression에서는 batch gradient descent를 사용한다.
 
-![image-20240915004455062](/images/2024-09-15-1-Gradient Descent/image-20240915004455062.png)
+![image-20240915004455062](https://cdn.jsdelivr.net/gh/gagyeomkim/gagyeomkim.github.io@master/images/2024-09-15-1-Gradient%20Descent/image-20240915004455062.png)
