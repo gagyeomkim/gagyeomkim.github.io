@@ -248,7 +248,7 @@ gradient descent의 역할은 cost function J를 최소화하는 파라미터 w�
 
 training set을 기반으로 계산되는 J를 각 iteration마다 plotting함으로써 gradient descent가 잘 작동하는지 확인할 수 있다.
 
-**iteration에 따른 cost의 그래프를 _Learning Curve_라고 한다.**
+**iteration에 따른 cost의 그래프를 Learning Curve라고 한다.**
 
 매 iteration마다 cost function J가 감소하고 있다면, 제대로 작동하는 것이고
 
