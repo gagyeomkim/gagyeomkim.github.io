@@ -7,7 +7,7 @@ typora-root-url: ../
 ---
 
 > Coursera의 Machine Learning Specialization강의를 정리한 내용입니다
-
+ 
 이번글에서는 Logistic Regression의 Cost Function, Gradient Descent에 대해서 알아볼 것이다.
 
 ## Cost function for logistic regression
