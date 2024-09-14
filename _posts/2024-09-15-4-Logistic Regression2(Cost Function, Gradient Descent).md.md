@@ -7,12 +7,12 @@ typora-root-url: ../
 ---
 
 > Coursera의 Machine Learning Specialization강의를 정리한 내용입니다
- 
+
 이번글에서는 Logistic Regression의 Cost Function, Gradient Descent에 대해서 알아볼 것이다.
 
-## Cost function for logistic regression
+## email이 스팸인지 아닌지, 온라인 금융거래가 사기인지 아닌지, 종양이 악성인지 아닌지 등을 구분하는 예시들이다.
 
-![image-20240915024304341](https://cdn.jsdelivr.net/gh/gagyeomkim/gagyeomkim.github.io@master/images/2024-09-15-4-Logistic Regression2(Cost Function, Gradient Descent).md/image-20240915024304341.png)
+![image-20240915024304341](./images/2024-09-15-4-Logistic Regression2(Cost Function, Gradient Descent).md/image-20240915024304341.png)
 
 > $m$ : training example의 개수. i를 통해 indexing함  
 > $n$ : feature의 개수. j를 통해 indexing함
@@ -21,13 +21,13 @@ logisitc regression은 binary classification 작업이므로 target label y는 0
 
 logisitc regression model은 위와 같은 방정식으로 정의될 수 있는데, training set을 사용할 때 적합한 파라미터 w와 b를 어떻게 고를까?
 
-<img src="https://cdn.jsdelivr.net/gh/gagyeomkim/gagyeomkim.github.io@master/images/2024-09-15-4-Logistic Regression2(Cost Function, Gradient Descent).md/image-20240915024554891.png" alt="image-20240915024554891" style="zoom: 67%;" />
+<img src="./images/2024-09-15-4-Logistic Regression2(Cost Function, Gradient Descent).md/image-20240915024554891.png" alt="image-20240915024554891" style="zoom: 67%;" />
 
 linear regression에서 사용했던 Squared error cost function을 살펴보자.
 
 $\\frac {1}{2}$를 summation안에 넣음으로써 식을 약간 변형하였다.
 
-이때의 hypothesis는 $\\vec{w} \\cdot \\vec{x} +b$이다.
+![image-20240915015028771](https://cdn.jsdelivr.net/gh/gagyeomkim/gagyeomkim.github.io@master/images/2024-09-15-3-Logistic%20regression%201/image-20240915015028771.png)
 
 linear regression에서는 Squared error cost function을 이용해서 plotting할 때 convex(볼록) 모양의 함수가 나왔음을 기억할 것이다.
 
@@ -35,17 +35,19 @@ linear regression에서는 Squared error cost function을 이용해서 plotting�
 
 ---
 
-logistic regression에서도 해당 cost function을 사용하면 어떨까?
+Is this email spam?  
+negative class: No(스팸이 아님)  
+positive class : Yes(스팸임)
 
 logistic regression에서는 hypothesis가 sigmoid함수였다.
 
-![image-20240915024622730](https://cdn.jsdelivr.net/gh/gagyeomkim/gagyeomkim.github.io@master/images/2024-09-15-4-Logistic Regression2(Cost Function, Gradient Descent).md/image-20240915024622730.png)
+![image-20240915024622730](./images/2024-09-15-4-Logistic Regression2(Cost Function, Gradient Descent).md/image-20240915024622730.png)
 
 logistic regression에 Mean Squared error cost function을 이용하여 plotting할 경우에는 위와 같이 non-convex(볼록하지 않은)한 형태의 그래프가 plotting되며, local minimum이 여러개 생기게 되어서 gradient descent를 이용할 때 global minimum에 convergence하도록 보장할 수 없다.
 
 이를 통해 우리는 logistic regression에 사용할 수 있는 새로운 cost function이 필요함을 알 수 있다.
 
-<img src="https://cdn.jsdelivr.net/gh/gagyeomkim/gagyeomkim.github.io@master/images/2024-09-15-4-Logistic Regression2(Cost Function, Gradient Descent).md/image-20240915024635226.png" alt="image-20240915024635226" style="zoom:67%;" />
+<img src="./images/2024-09-15-4-Logistic Regression2(Cost Function, Gradient Descent).md/image-20240915024635226.png" alt="image-20240915024635226" style="zoom:67%;" />
 
 그전에 우리는 cost function J의 정의를 조금 변경해볼 것이다.
 
@@ -61,7 +63,7 @@ logistic regression에 Mean Squared error cost function을 이용하여 plotting
 
 logistic regression에 사용할 loss function의 definition을 적어보자.
 
-![image-20240915024648002](https://cdn.jsdelivr.net/gh/gagyeomkim/gagyeomkim.github.io@master/images/2024-09-15-4-Logistic Regression2(Cost Function, Gradient Descent).md/image-20240915024648002.png)
+![image-20240915024648002](./images/2024-09-15-4-Logistic Regression2(Cost Function, Gradient Descent).md/image-20240915024648002.png)
 
 loss function은 위와 같은 식으로 정의된다.
 
@@ -74,7 +76,7 @@ target label y가 1일 때와 0일 때로 나눠서 생각해보자.
 
 ### \- $y^{(i)}$=1일 때 
 
-![image-20240915024717893](https://cdn.jsdelivr.net/gh/gagyeomkim/gagyeomkim.github.io@master/images/2024-09-15-4-Logistic Regression2(Cost Function, Gradient Descent).md/image-20240915024717893.png)
+![image-20240915024717893](./images/2024-09-15-4-Logistic Regression2(Cost Function, Gradient Descent).md/image-20240915024717893.png)
 
 $y^{(i)}$=1일 때의 loss function은 $-log(f(x))$함수로 표현된다.
 
@@ -102,7 +104,7 @@ logistic regression의 출력값($g(z)$)은 항상 0과 1사이이므로 $f$(=$g
 
 해당 범위를 가져와서 확대해보자.
 
-![image-20240915024733647](https://cdn.jsdelivr.net/gh/gagyeomkim/gagyeomkim.github.io@master/images/2024-09-15-4-Logistic Regression2(Cost Function, Gradient Descent).md/image-20240915024733647.png)
+![image-20240915024733647](./images/2024-09-15-4-Logistic Regression2(Cost Function, Gradient Descent).md/image-20240915024733647.png)
 
 이번엔 실제 target value가 0의 값을 가지고 있으므로
 
@@ -114,7 +116,7 @@ f(x)의 예측값이 1에 가깝다면(ex.0.999) loss는 $\\infty$에 근접할 
 
 ### \- Cost
 
-![image-20240915024747295](https://cdn.jsdelivr.net/gh/gagyeomkim/gagyeomkim.github.io@master/images/2024-09-15-4-Logistic Regression2(Cost Function, Gradient Descent).md/image-20240915024747295.png)
+![image-20240915024747295](./images/2024-09-15-4-Logistic Regression2(Cost Function, Gradient Descent).md/image-20240915024747295.png)
 
 즉, Cost를 정의해보면 위와 같은 사진으로 한번에 나타낼 수 있다.
 
@@ -128,27 +130,27 @@ Cost function은 **전체 training example의 loss를 평균낸 것**이며,cost
 
 정의한 cost function을 좀 더 단순한 방정식으로 다시 한번 정의해보자.
 
-![image-20240915024803649](https://cdn.jsdelivr.net/gh/gagyeomkim/gagyeomkim.github.io@master/images/2024-09-15-4-Logistic Regression2(Cost Function, Gradient Descent).md/image-20240915024803649.png)
+![image-20240915024803649](./images/2024-09-15-4-Logistic Regression2(Cost Function, Gradient Descent).md/image-20240915024803649.png)
 
 binary classification문제에서 target value y는 0이거나, 1의 값만을 가질 수 있으므로, loss function을 위와 같이 하나의 방정식으로 적을 수 있다.
 
-![image-20240915024814964](https://cdn.jsdelivr.net/gh/gagyeomkim/gagyeomkim.github.io@master/images/2024-09-15-4-Logistic Regression2(Cost Function, Gradient Descent).md/image-20240915024814964.png)
+![image-20240915024814964](./images/2024-09-15-4-Logistic Regression2(Cost Function, Gradient Descent).md/image-20240915024814964.png)
 
 y=1인 경우, 뒤의 식이 0이되어 사라지고, 앞의 식만 남게 되는데, 이는 위에서 정의한 y=1일때 Loss function의 식과 일치한다.
 
-![image-20240915024828088](https://cdn.jsdelivr.net/gh/gagyeomkim/gagyeomkim.github.io@master/images/2024-09-15-4-Logistic Regression2(Cost Function, Gradient Descent).md/image-20240915024828088.png)
+![image-20240915024828088](./images/2024-09-15-4-Logistic Regression2(Cost Function, Gradient Descent).md/image-20240915024828088.png)
 
 y=1인 경우, 앞의 식이 0이되어 사라지고, 뒤의 식만 남게 되는데, 이는 위에서 정의한 y=0일때 Loss function의 식과 일치한다.
 
 이처럼 loss function을 한줄로 적게 되면, cost function도 좀 더 단순화할 수 있다.
 
-![image-20240915025314752](https://cdn.jsdelivr.net/gh/gagyeomkim/gagyeomkim.github.io@master/images/2024-09-15-4-Logistic Regression2(Cost Function, Gradient Descent).md/image-20240915025314752.png)
+![image-20240915025314752](./images/2024-09-15-4-Logistic Regression2(Cost Function, Gradient Descent).md/image-20240915025314752.png)
 
 우선 맨 위의 식과 같이 loss function을 한줄의 방식으로 표현한다.
 
 단순화된 loss function의 식을 cost function에 가져와 연결하고, -부호를 앞으로 빼면  최종적으로 아래와 같은 표현식을 얻을 수 있으며, 이것이 logistic regression을 training 시킬 때 가장 많이 사용하는 cost function이다. 
 
-<img src="https://cdn.jsdelivr.net/gh/gagyeomkim/gagyeomkim.github.io@master/images/2024-09-15-4-Logistic Regression2(Cost Function, Gradient Descent).md/image-20240915025219498.png" alt="image-20240915025219498" style="zoom:67%;" />
+<img src="./images/2024-09-15-4-Logistic Regression2(Cost Function, Gradient Descent).md/image-20240915025219498.png" alt="image-20240915025219498" style="zoom:67%;" />
 
 해당 cost function은 convex한 속성을 가지고 있다.
 
@@ -159,19 +161,19 @@ y=1인 경우, 앞의 식이 0이되어 사라지고, 뒤의 식만 남게 되�
 
 (target과 예측값의 차이가 커지는 경우가 발생하기 때문)
 
-<img src="https://cdn.jsdelivr.net/gh/gagyeomkim/gagyeomkim.github.io@master/images/2024-09-15-4-Logistic Regression2(Cost Function, Gradient Descent).md/image-20240915025348126.png" alt="image-20240915025348126" style="zoom:67%;" />
+<img src="./images/2024-09-15-4-Logistic Regression2(Cost Function, Gradient Descent).md/image-20240915025348126.png" alt="image-20240915025348126" style="zoom:67%;" />
 
 ---
 
 ## Gradient descent
 
-<img src="https://cdn.jsdelivr.net/gh/gagyeomkim/gagyeomkim.github.io@master/images/2024-09-15-4-Logistic Regression2(Cost Function, Gradient Descent).md/image-20240915025405341.png" alt="image-20240915025405341" style="zoom: 50%;" />
+<img src="./images/2024-09-15-4-Logistic Regression2(Cost Function, Gradient Descent).md/image-20240915025405341.png" alt="image-20240915025405341" style="zoom: 50%;" />
 
 해당 강의에서는 파라미터 w와 b를 잘 선택하는 방법에 대해 살펴본다.
 
 파라미터를 선택한 후 x라는 새로운 input을 주면 model이 예측을 하고, label y가 1일 확률을 추정할 수 있다.
 
-![image-20240915025426099](https://cdn.jsdelivr.net/gh/gagyeomkim/gagyeomkim.github.io@master/images/2024-09-15-4-Logistic Regression2(Cost Function, Gradient Descent).md/image-20240915025426099.png)
+![image-20240915025426099](./images/2024-09-15-4-Logistic Regression2(Cost Function, Gradient Descent).md/image-20240915025426099.png)
 
 일반적으로 cost를 최소화하는데 사용하는 방법은 gradient descent이다.
 
@@ -183,7 +185,7 @@ J의 도함수를 계산해서 기존 식에다가 대입하는 방법또한 같
 
 즉, 파라미터 w와 b에 대한 update 방정식은 linear regression에서 생각해냈던 것과 똑같다.
 
-![image-20240915025441974](https://cdn.jsdelivr.net/gh/gagyeomkim/gagyeomkim.github.io@master/images/2024-09-15-4-Logistic Regression2(Cost Function, Gradient Descent).md/image-20240915025441974.png)
+![image-20240915025441974](./images/2024-09-15-4-Logistic Regression2(Cost Function, Gradient Descent).md/image-20240915025441974.png)
 
 하지만 이 방정식들이 똑같아도 **linear regression이 아닌 이유로는 f(x)(Hypothesis)에 대한 정의가 바뀌었기 때문이다.**
 
@@ -204,7 +206,7 @@ logistic regression에서는 hypothesis로 sigmoid함수가 사용된다.
 
 ### \- scikit-learn을 사용한 logistic regression
 
-```python
+```
 import numpy as np
 
 X = np.array([[0.5, 1.5], [1,1], [1.5, 0.5], [3, 0.5], [2, 2], [1, 2.5]])
@@ -233,4 +235,3 @@ print("Prediction on training set:", y_pred)
 ```python
 print("Accuracy on training set:", lr_model.score(X, y))
 ```
-
