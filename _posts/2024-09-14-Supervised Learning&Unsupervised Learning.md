@@ -1,6 +1,6 @@
 ---
 layout: single
-title: "Supervised Learning & Unsupervised Learning
+title: "Supervised Learning & Unsupervised Learning"
 categories: machineLearning
 tag: Machine Learning Specialization
 typora-root-url: ../
