@@ -1,7 +1,7 @@
 ---
 layout: single
 title: "Intro & What is Machine Learning"
-categories: Machine_Learning
+categories: machineLearning
 tag: Machine Learning Specialization
 ---
 
