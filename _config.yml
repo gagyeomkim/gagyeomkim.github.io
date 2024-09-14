@@ -329,12 +329,12 @@ defaults:
       related: true
       sidebar_main: true
       toc: true
-      toc_label: "Table Of Contents"
+      toc_label: "Contents"
       toc_sticky: true
       toc_icon: "bars"
+      show_date : true
       sidebar:
           nav: "counts"
-      show_date : true
 
       
 date_format: "%Y-%m-%d"

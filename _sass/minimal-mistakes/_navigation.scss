@@ -511,9 +511,9 @@
   box-shadow: $box-shadow;
 
   .nav__title {
-    color: #fff;
+    color: #0e0e0e;
     font-size: $type-size-6;
-    background: $toc-color;
+    background: #fff;
     border-start-start-radius: $border-radius;
     border-start-end-radius: $border-radius;
   }
@@ -528,6 +528,7 @@
   margin: 0;
   padding: 0;
   width: 100%;
+
   list-style: none;
   font-size: $type-size-6;
 
@@ -539,7 +540,7 @@
     display: block;
     padding: 0.25rem 0.75rem;
     color: $muted-text-color;
-    font-weight: bold;
+    font-size: 0.7rem;
     line-height: 1.5;
     border-bottom: 1px solid $border-color;
 
