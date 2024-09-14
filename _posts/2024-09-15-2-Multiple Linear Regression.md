@@ -22,9 +22,9 @@ typora-root-url: ../
 
 각 feature를 $X\_1, X\_2, X\_3, X\_4$라는 변수를 사용하여 표시하겠다.
 
-> 표기법에 대한 정리는 위를 참고하자. \`i\`는 **training example**의 index이고, \`j\`는 **feature**의 index를 의미한다.
+> 표기법에 대한 정리는 위를 참고하자. `i`는 **training example**의 index이고, `j`는 **feature**의 index를 의미한다.
 
-즉,  $x\_j^{(i)}$는 \`i\`번째 training example의 \`j\`번째 feature를 의미한다.
+즉,  $x\_j^{(i)}$는 `i`번째 training example의 `j`번째 feature를 의미한다.
 
 <img src="https://cdn.jsdelivr.net/gh/gagyeomkim/gagyeomkim.github.io@master/images/2024-09-15-2-Multiple%20Linear%20Regression/image-20240915010630665.png" style="zoom:50%;" />
 
@@ -84,9 +84,9 @@ X또한 행벡터로 작성해보자.
 
 ![image-20240915010834446](https://cdn.jsdelivr.net/gh/gagyeomkim/gagyeomkim.github.io@master/images/2024-09-15-2-Multiple%20Linear%20Regression/image-20240915010834446.png)
 
-\`np.dot\`은 벡터 w와 x사이의 수학적 dot product를 구현한 다음, b를 더할 수 있다.
+`np.dot`은 벡터 w와 x사이의 수학적 dot product를 구현한 다음, b를 더할 수 있다.
 
-즉, \`dot\` 함수는 두 벡터 사이의 dot product 연산을 vectorization하여 구현한 것이다.
+즉, `dot` 함수는 두 벡터 사이의 dot product 연산을 vectorization하여 구현한 것이다.
 
 $n$(number of features)이 늘어날 경우, 벡터화를 사용하지 않는 연산보다 훨씬 더 빠르게 실행된다.
 
@@ -104,7 +104,7 @@ Multiple linear regression에서는 이것이 어떻게 도움이 될까?
 
 (learning rate는 0.1로 잡았다)
 
-\`d\`는 16개의 도함수 값(미분계수)를 계산하여 담을 배열이다.
+`d`는 16개의 도함수 값(미분계수)를 계산하여 담을 배열이다.
 
 vectorization에서는 병렬처리 하드웨어를 사용하여 한번에 parameter를 update하고, 효율적인 수행을 진행한다.
 

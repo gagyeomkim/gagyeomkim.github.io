@@ -167,7 +167,7 @@ y의 output은 0또는 1이되어야만 하기에, y=0일 확률과 y=1일 확�
 
 <img src="https://cdn.jsdelivr.net/gh/gagyeomkim/gagyeomkim.github.io@master/images/2024-09-15-3-Logistic%20regression%201/image-20240915015415897.png" alt="image-20240915015415897" style="zoom:50%;" />
 
-세미콜론 \`;\`을 통해 input feature x에서 y가 1이 될 확률에 영향을 미치는 파라미터를 구분할 수 있다.  
+세미콜론 `;`을 통해 input feature x에서 y가 1이 될 확률에 영향을 미치는 파라미터를 구분할 수 있다.  
 
 ---
 

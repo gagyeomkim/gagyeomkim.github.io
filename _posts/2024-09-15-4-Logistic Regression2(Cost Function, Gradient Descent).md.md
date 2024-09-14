@@ -211,7 +211,7 @@ X = np.array([[0.5, 1.5], [1,1], [1.5, 0.5], [3, 0.5], [2, 2], [1, 2.5]])
 y = np.array([0, 0, 0, 1, 1, 1])
 ```
 
-1\. \`fit\` function : model을 training data에 fitting할 수 있다.
+1\. `fit` function : model을 training data에 fitting할 수 있다.
 
 ```python
 from sklearn.linear_model import LogisticRegression
@@ -220,7 +220,7 @@ lr_model = LogisticRegression()
 lr_model.fit(X, y)
 ```
 
-2\. \`predict\` function : model에 의해 만들어진 prediction을 볼 수 있다.
+2\. `predict` function : model에 의해 만들어진 prediction을 볼 수 있다.
 
 ```python
 y_pred = lr_model.predict(X)
@@ -228,7 +228,7 @@ y_pred = lr_model.predict(X)
 print("Prediction on training set:", y_pred)
 ```
 
-3\. \`score\` function : model의 정확성을 계산할 수 있다.
+3\. `score` function : model의 정확성을 계산할 수 있다.
 
 ```python
 print("Accuracy on training set:", lr_model.score(X, y))
