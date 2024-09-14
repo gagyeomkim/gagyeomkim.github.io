@@ -3,6 +3,7 @@ layout: single
 title: "Intro & What is Machine Learning"
 categories: ['Machine Learning']
 tag: Machine Learning Specialization
+last_modified_at: 2024-09-14T14:00:00
 ---
 
 > Coursera의 Machine Learning Specialization강의를 정리한 내용입니다.

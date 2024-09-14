@@ -3,6 +3,7 @@ layout: single
 title: "Supervised Learning & Unsupervised Learning"
 categories: ['Machine Learning']
 tag: Machine Learning Specialization
+last_modified_at: 2024-09-14T12:00:00
 typora-root-url: ../
 ---
 
@@ -28,13 +29,15 @@ Supervised Learning은 크게 **Regression(회귀)**과 **Classification(분류)
 
 Regression이란 무한히 많은(모든 범위에서) 가능한 출력값을 예측하는 것이다.
 
-![image-20240914150052412](/images/2024-09-14 Supervised Learning & Unsupervised Learning/image-20240914150052412.png)*regression의 예*
+![image-20240914184830646](/images/2024-09-14-1-Supervised Learning&Unsupervised Learning/image-20240914184830646.png)*regression의 예*
 
 x축은 House size이며, y축은 Price를 의미한다. 우리에게는 X표시로 dataset이 주어졌다.
 
 750 평방피트의 주택가격이 얼마인지 알고싶다고 가정해보면,
 
 데이터에 가장 적합한 **직선**(150k 예상)이나 **곡선**(200k 예상) 또는 다른 것을 선택함으로써 주택의 예상가격을 예측할 수 있다.
+
+
 
 ### Classification(분류)
 
@@ -44,7 +47,7 @@ Classification이란 가능한 output의 **작은 집합만을 가지고** **출
 
 >  분류과정에서 출력 클래스나 출력 카테고리는 같은 의미로 쓰인다.
 
-![image-20240914150258093](/images/2024-09-14-Supervised Learning & Unsupervised Learning/image-20240914150258093.png)
+<img src="/images/2024-09-14-1-Supervised Learning&Unsupervised Learning/image-20240914185224469.png" alt="image-20240914185224469" style="zoom:80%;" />
 
 의사가 유방암을 진단하기 위해 기계학습 시스템을 구축하고 있다고 가정하자.
 
@@ -58,25 +61,25 @@ Classification이란 가능한 output의 **작은 집합만을 가지고** **출
 
 양성 class를 O, 악성 class를 X 기호를 사용해서 표시하자.
 
-
+<br>
 
 Classification에서는 아래와 같이 출력 클래스가 2개 이상인 Multiclass classification(다중분류)도 가능하다.
 
-![image-20240914150735904](/images/2024-09-14-Supervised Learning & Unsupervised Learning/image-20240914150735904.png)
-
-
+![image-20240914185244449](/images/2024-09-14-1-Supervised Learning&Unsupervised Learning/image-20240914185244449.png)
 
 >  class는 0,1,2 같은 숫자일 수도 있다.
 >
-> 그러나 숫자를 해석할 때 classification는 0,1,2와 같이 가능한 **출력 범주의 작고 유한한 제한된 집합을 예측**하지만 회귀는 가능한 모든 숫자를 예측한다는 점이 다르다.(0.5 또는 1.7...등등)
+>  그러나 숫자를 해석할 때 classification는 0,1,2와 같이 가능한 **출력 범주의 작고 유한한 제한된 집합을 예측**하지만 회귀는 가능한 모든 숫자를 예측한다는 점이 다르다.(0.5 또는 1.7...등등)
 >
-> <br>
+>  <br>
 >
-> 물론, 출력 클래스가 꼭 숫자일 필요는 없다.
+>  물론, 출력 클래스가 꼭 숫자일 필요는 없다.
 >
-> ex. 사진이 고양이인지 개사진인지 예측하는 것, 양성/악성 종양을 구분하는 것도 Class가 될 수 있다.
+>  ex. 사진이 고양이인지 개사진인지 예측하는 것, 양성/악성 종양을 구분하는 것도 Class가 될 수 있다.
 
-<img src="/images/2024-09-14-Supervised Learning & Unsupervised Learning/image-20240914150816468.png" alt="image-20240914150816468" style="zoom:50%;" />
+<br>
+
+<img src="/images/2024-09-14-1-Supervised Learning&Unsupervised Learning/image-20240914185253795.png" alt="image-20240914185253795" style="zoom:50%;" />
 
 또한, 둘 이상의 입력값을 사용하여 출력값을 예측할 수 있다.
 
@@ -100,13 +103,13 @@ Unsupervised Learning(비지도학습)은 라벨링되어있지 않은 데이터
 
 Clustering이란 각 주어진 data들이 얼마나 유사한지에 따라 데이터를 군집으로 분류하는 것이다.
 
-<img src="/images/2024-09-14-Supervised Learning & Unsupervised Learning/image-20240914150948183.png" alt="image-20240914150948183" style="zoom:50%;" />
+<img src="/images/2024-09-14-1-Supervised Learning&Unsupervised Learning/image-20240914185307365.png" alt="image-20240914185307365" style="zoom:50%;" />
 
-<img src="/images/2024-09-14-Supervised Learning & Unsupervised Learning/image-20240914150957365.png" alt="image-20240914150957365" style="zoom:50%;" />
+<img src="/images/2024-09-14-1-Supervised Learning&Unsupervised Learning/image-20240914185318271.png" alt="image-20240914185318271" style="zoom:50%;" />
 
 위의 사진에서, Google news에서 클러스터링을 사용하는 것을 알 수 있다. 인터넷에 있는 수십만개의 뉴스 기사를 살펴보고 관련기사를 그룹화하고 있다.(다양한 기사에서 공통으로 언급된 단어가 발견되어 클러스터링 알고리즘이 해당 기사들을 찾음을 알 수 있다.)
 
-<img src="/images/2024-09-14-Supervised Learning & Unsupervised Learning/image-20240914151010881.png" alt="image-20240914151010881" style="zoom:50%;" />
+<img src="./images/2024-09-14-1-Supervised Learning&Unsupervised Learning/image-20240914185329486.png" alt="image-20240914185329486" style="zoom:50%;" />
 
 Clustering 알고리즘은 유전학 자료를 연구하는 데에도 사용된다.
 
@@ -120,7 +123,7 @@ Clustering 알고리즘은 유전학 자료를 연구하는 데에도 사용된�
 
 > 알고리즘에 특정한 특성을 가진 Type1의 사람이 있다고 미리 알려주는 것이 아니기에 비지도 학습의 일종이다.
 
-<img src="/images/2024-09-14-Supervised Learning & Unsupervised Learning/image-20240914151034198.png" alt="image-20240914151034198" style="zoom:50%;" />
+<img src="/images/2024-09-14-1-Supervised Learning&Unsupervised Learning/image-20240914185336977.png" alt="image-20240914185336977" style="zoom:50%;" />
 
 서비스를 제공할 때, 시장 세분화를 통해서 사람들을 구별하는 것도 Clustering의 한가지 예이다.
 
