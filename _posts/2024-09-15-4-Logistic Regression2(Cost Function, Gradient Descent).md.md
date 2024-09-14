@@ -10,7 +10,7 @@ typora-root-url: ../
 
 이번글에서는 Logistic Regression의 Cost Function, Gradient Descent에 대해서 알아볼 것이다.
 
-## email이 스팸인지 아닌지, 온라인 금융거래가 사기인지 아닌지, 종양이 악성인지 아닌지 등을 구분하는 예시들이다.
+## Cost function for logistic regression
 
 ![image-20240915024304341](./images/2024-09-15-4-Logistic Regression2(Cost Function, Gradient Descent).md/image-20240915024304341.png)
 
@@ -27,7 +27,7 @@ linear regression에서 사용했던 Squared error cost function을 살펴보자
 
 $\\frac {1}{2}$를 summation안에 넣음으로써 식을 약간 변형하였다.
 
-![image-20240915015028771](https://cdn.jsdelivr.net/gh/gagyeomkim/gagyeomkim.github.io@master/images/2024-09-15-3-Logistic%20regression%201/image-20240915015028771.png)
+이때의 hypothesis는 $\\vec{w} \\cdot \\vec{x} +b$이다.
 
 linear regression에서는 Squared error cost function을 이용해서 plotting할 때 convex(볼록) 모양의 함수가 나왔음을 기억할 것이다.
 
@@ -35,9 +35,7 @@ linear regression에서는 Squared error cost function을 이용해서 plotting�
 
 ---
 
-Is this email spam?  
-negative class: No(스팸이 아님)  
-positive class : Yes(스팸임)
+logistic regression에서도 해당 cost function을 사용하면 어떨까?
 
 logistic regression에서는 hypothesis가 sigmoid함수였다.
 
@@ -206,7 +204,7 @@ logistic regression에서는 hypothesis로 sigmoid함수가 사용된다.
 
 ### \- scikit-learn을 사용한 logistic regression
 
-```
+```python
 import numpy as np
 
 X = np.array([[0.5, 1.5], [1,1], [1.5, 0.5], [3, 0.5], [2, 2], [1, 2.5]])
