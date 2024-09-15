@@ -212,7 +212,7 @@ training set에 있는 $x_1$의 평균을 600이라고 할때, 이것은 아래�
 
 $$\mu_1=600$$
 
-> $\mu$는 그리스 알파벳으로 \[mu,뮤\]라고 발음한다.
+> $\mu$는 그리스 알파벳으로 [mu,뮤\]라고 발음한다.
 
 Mean normalization으로 feature scaling을 진행하는 방법은 해당 feature의 값에서  $\mu_j$(여기서 j는 feature의 index)의 값을 뺀 뒤, 범위의 (최댓값 - 최솟값)으로 나눠주는 것이다.
 
