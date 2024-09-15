@@ -29,7 +29,7 @@ Supervised Learning은 크게 **Regression(회귀)**과 **Classification(분류)
 
 Regression이란 무한히 많은(모든 범위에서) 가능한 출력값을 예측하는 것이다.
 
-![image-20240914184830646](https://1drv.ms/i/s!AvDtmE0jTiDWgkrOHwjVF67IAAJb?embed=1&width=1150&height=646)*regression의 예*
+![image-20240914184830646](https://1drv.ms/i/s!AvDtmE0jTiDWgkrOHwjVF67IAAJb?embed=1&width=1150&height=646){: .align-center}*regression의 예*
 
 x축은 House size이며, y축은 Price를 의미한다. 우리에게는 X표시로 dataset이 주어졌다.
 
@@ -47,7 +47,7 @@ Classification이란 가능한 output의 **작은 집합만을 가지고** **출
 
 >  분류과정에서 출력 클래스나 출력 카테고리는 같은 의미로 쓰인다.
 
-<img src="https://1drv.ms/i/s!AvDtmE0jTiDWgkvQjPYP3_qT43MN?embed=1&width=1060&height=496" style="zoom:80%;" />
+<img src="https://1drv.ms/i/s!AvDtmE0jTiDWgkvQjPYP3_qT43MN?embed=1&width=1060&height=496" style="zoom:80%;" />{: .align-center}
 
 의사가 유방암을 진단하기 위해 기계학습 시스템을 구축하고 있다고 가정하자.
 
@@ -65,7 +65,7 @@ Classification이란 가능한 output의 **작은 집합만을 가지고** **출
 
 Classification에서는 아래와 같이 출력 클래스가 2개 이상인 **Multiclass classification**(다중분류)도 가능하다.
 
-![image-20240914185244449](https://1drv.ms/i/s!AvDtmE0jTiDWgkzPUYQ-02RHJKyx?embed=1&width=1250&height=257)
+![image-20240914185244449](https://1drv.ms/i/s!AvDtmE0jTiDWgkzPUYQ-02RHJKyx?embed=1&width=1250&height=257){: .align-center}
 
 >  class는 0,1,2 같은 숫자일 수도 있다.
 >
@@ -79,7 +79,7 @@ Classification에서는 아래와 같이 출력 클래스가 2개 이상인 **Mu
 
 <br>
 
-<img src="https://1drv.ms/i/s!AvDtmE0jTiDWgk3ASSPvZOShh94l?embed=1&width=670&height=553" style="zoom:50%;" />
+<img src="https://1drv.ms/i/s!AvDtmE0jTiDWgk3ASSPvZOShh94l?embed=1&width=670&height=553" style="zoom:50%;" />{: .align-center}
 
 또한, 둘 이상의 입력값을 사용하여 출력값을 예측할 수 있다.
 
@@ -103,13 +103,13 @@ Unsupervised Learning(비지도학습)은 라벨링되어있지 않은 데이터
 
 Clustering이란 각 주어진 data들이 얼마나 유사한지에 따라 데이터를 군집으로 분류하는 것이다.
 
-<img src="https://1drv.ms/i/s!AvDtmE0jTiDWgk6oqh386M4loVti?embed=1&width=670&height=525" style="zoom:50%;" />
+<img src="https://1drv.ms/i/s!AvDtmE0jTiDWgk6oqh386M4loVti?embed=1&width=670&height=525" style="zoom:50%;" />{: .align-center}
 
-<img src="https://1drv.ms/i/s!AvDtmE0jTiDWgk-rcN9waYGPuVJR?embed=1&width=860&height=578" alt="image-20240914185318271" style="zoom:50%;" />
+<img src="https://1drv.ms/i/s!AvDtmE0jTiDWgk-rcN9waYGPuVJR?embed=1&width=860&height=578" alt="image-20240914185318271" style="zoom:50%;" />{: .align-center}
 
 위의 사진에서, Google news에서 클러스터링을 사용하는 것을 알 수 있다. 인터넷에 있는 수십만개의 뉴스 기사를 살펴보고 관련기사를 그룹화하고 있다.(다양한 기사에서 공통으로 언급된 단어가 발견되어 클러스터링 알고리즘이 해당 기사들을 찾음을 알 수 있다.)
 
-<img src="https://1drv.ms/i/s!AvDtmE0jTiDWglDMAwENQijo9EP9?embed=1&width=960&height=539" style="zoom:50%;" />
+<img src="https://1drv.ms/i/s!AvDtmE0jTiDWglDMAwENQijo9EP9?embed=1&width=960&height=539" style="zoom:50%;" />{: .align-center}
 
 Clustering 알고리즘은 유전학 자료를 연구하는 데에도 사용된다.
 
@@ -123,7 +123,7 @@ Clustering 알고리즘은 유전학 자료를 연구하는 데에도 사용된�
 
 > 알고리즘에 특정한 특성을 가진 Type1의 사람이 있다고 미리 알려주는 것이 아니기에 비지도 학습의 일종이다.
 
-<img src="https://1drv.ms/i/s!AvDtmE0jTiDWglF0q6CIv3Y5kwTl?embed=1&width=960&height=552" style="zoom:50%;" />
+<img src="https://1drv.ms/i/s!AvDtmE0jTiDWglF0q6CIv3Y5kwTl?embed=1&width=960&height=552" style="zoom:50%;" />{: .align-center}
 
 서비스를 제공할 때, 시장 세분화를 통해서 사람들을 구별하는 것도 Clustering의 한가지 예이다.
 
@@ -145,4 +145,4 @@ dimensionality reduction은 큰 데이터 집합을 가져와서 정보를 최�
 
 ## reference
 
-* [https://junstar92.tistory.com/13](https://junstar92.tistory.com/13)
+* [https://junstar92.tistory.com/13](https://junstar92.tistory.com/13){: .align-center}
