@@ -7,7 +7,7 @@ typora-root-url: ../
 
 ---
 
-![image-20240915184538121](./images/2024-09-15-7-Neural networks/image-20240915184538121.png)
+![image-20240915184538121](https://cdn.jsdelivr.net/gh/gagyeomkim/gagyeomkim.github.io@master/images/2024-09-15-7-Neural%20networks/image-20240915184538121.png){: .align-center}
 
 Course 2에서 알아볼 내용은 아래와 같다.
 
@@ -20,7 +20,7 @@ Course 2에서 알아볼 내용은 아래와 같다.
 
 뇌가 어떻게 작동하고 그것이 neural network와 어떤 관련이 있는지 살펴보자
 
-![image-20240915184550566](./images/2024-09-15-7-Neural networks/image-20240915184550566.png)
+![image-20240915184550566](https://cdn.jsdelivr.net/gh/gagyeomkim/gagyeomkim.github.io@master/images/2024-09-15-7-Neural%20networks/image-20240915184550566.png){: .align-center}
 
 Neural networks가 처음 발명되었을 때 원래의 동기는 생물학적 뇌가 학습하고 생각하는 방식을 모방할 수 있는 소프트웨어를 개발하는 것이었다. (오늘날의 신경망은 artificial neural network(인공신경망)이라고도 하며, 뇌의 학습방식과 거의 관련이 없다)  
 
@@ -30,7 +30,7 @@ Neural networks가 처음 발명되었을 때 원래의 동기는 생물학적 �
 
 그렇다면 neural network의 모티브가 된 뇌는 어떻게 작동할까?
 
-![image-20240915184602966](./images/2024-09-15-7-Neural networks/image-20240915184602966.png)
+![image-20240915184602966](https://cdn.jsdelivr.net/gh/gagyeomkim/gagyeomkim.github.io@master/images/2024-09-15-7-Neural%20networks/image-20240915184602966.png){: .align-center}
 
 위의 사진은 뇌에 존재하는 Neuron(뉴런)에 대한 사진이다.
 
@@ -42,7 +42,7 @@ Neural networks가 처음 발명되었을 때 원래의 동기는 생물학적 �
 
 즉, **여러가지 다른 상위 뉴런의 input을 받아 계산한 output을 다른 하위 뉴런의 input으로 보낼 수 있는 것**이다.
 
-![image-20240915184614505](./images/2024-09-15-7-Neural networks/image-20240915184614505.png)
+![image-20240915184614505](https://cdn.jsdelivr.net/gh/gagyeomkim/gagyeomkim.github.io@master/images/2024-09-15-7-Neural%20networks/image-20240915184614505.png){: .align-center}
 
 위의 사진은 생물학적 neuron의 간단한 그림이다.
 
@@ -56,7 +56,7 @@ neuron은 왼쪽그림과 같이 cell body(세포체)로 구성되어 있으며,
 
 ---
 
-![image-20240915184627160](./images/2024-09-15-7-Neural networks/image-20240915184627160.png)
+![image-20240915184627160](https://cdn.jsdelivr.net/gh/gagyeomkim/gagyeomkim.github.io@master/images/2024-09-15-7-Neural%20networks/image-20240915184627160.png){: .align-center}
 
 artificial neural network 는 생물학적 뉴런이 하는 일에 비해 매우 단순화된 수학적 모델을 사용한다.
 
@@ -70,7 +70,7 @@ artificial neural network나 deep learning algorithm을 만들 때는 한번에 
 
 아래와 같이 여러개의 neuron을 동시에 시뮬레이션 하는 경우가 많다.
 
-![image-20240915184639100](./images/2024-09-15-7-Neural networks/image-20240915184639100.png)
+![image-20240915184639100](https://cdn.jsdelivr.net/gh/gagyeomkim/gagyeomkim.github.io@master/images/2024-09-15-7-Neural%20networks/image-20240915184639100.png){: .align-center}
 
 해당 neuron들이 총체적으로 하는 일은 몇개의 숫자를 입력하고, 계산을 수행하고, 다른 숫자를 출력하는 것이다.
 
@@ -80,7 +80,7 @@ artificial neural network나 deep learning algorithm을 만들 때는 한번에 
 
 neural network에 대한 아이디어는 수십년 전부터 존재해왔는데, neural network가 발전한 것은 왜 지난 몇년 동안뿐(2005년부터 시작됐으므로)인걸까? 아래 사진은 이를 설명해주는 사진이다.
 
-![image-20240915184653471](./images/2024-09-15-7-Neural networks/image-20240915184653471.png)
+![image-20240915184653471](https://cdn.jsdelivr.net/gh/gagyeomkim/gagyeomkim.github.io@master/images/2024-09-15-7-Neural%20networks/image-20240915184653471.png){: .align-center}
 
 가로축은 problem에 대해 가지고 있는 data의 양을, 세로축에는 해당 문제에 적용된 learning algorithm의 성능 또는 정확도를 나타냈다.
 
@@ -100,7 +100,7 @@ deep learning에 강력한 성능을 보여주는 GPU의 발전도 deep learning
 
 Demand Prediction(수요예측)의 예를 들어 neural network의 작동방식에 대해서 알아보겠다.
 
-![image-20240915184705354](./images/2024-09-15-7-Neural networks/image-20240915184705354.png)
+![image-20240915184705354](https://cdn.jsdelivr.net/gh/gagyeomkim/gagyeomkim.github.io@master/images/2024-09-15-7-Neural%20networks/image-20240915184705354.png){: .align-center}
 
 해당 예시에서는 티셔츠를 판매하고 있는데, 특정한 티셔츠가 베스트셀러가 될지 아닌지를 알고 싶다고 가정한다.
 
@@ -112,7 +112,7 @@ a는 **activation**(활성화)의 약어이며, **neuron이 하위의 다른 neu
 
 아래와 같이 **하나의 logistic regression unit**은 **하나의(single) neuron의 매우 단순화된 model**로 대응된다. (생물학적 neuron보다 매우 단순한 형태이기 때문에)
 
-<img src="./images/2024-09-15-7-Neural networks/image-20240915184723078.png" alt="image-20240915184723078"  />
+<img src="https://cdn.jsdelivr.net/gh/gagyeomkim/gagyeomkim.github.io@master/images/2024-09-15-7-Neural%20networks/image-20240915184723078.png" alt="image-20240915184723078"  />{: .align-center}
 
 neuron이 하는 일은 price를 input으로 받아 위의 공식을 계산해서 a를 출력하는 것이다.
 
@@ -124,7 +124,7 @@ neural network를 구축하기 위해서는 이러한 neuron을 여러개 가져
 
 이제 demand prediction의 좀 더 복잡한 예를 살펴보자.
 
-![image-20240915184744966](./images/2024-09-15-7-Neural networks/image-20240915184744966.png)
+![image-20240915184744966](https://cdn.jsdelivr.net/gh/gagyeomkim/gagyeomkim.github.io@master/images/2024-09-15-7-Neural%20networks/image-20240915184744966.png){: .align-center}
 
 해당 예제에서는 4개의 feature를 input으로 가진다.
 
@@ -148,7 +148,7 @@ neural network적 용어로 말하자면, 우리는 각 뉴런들을 **layer**�
 
 **layer**란 **동일하거나 유사한 feature를 입력받아 숫자 몇개를 함께 출력해주는 neuron의 group**을 말한다.
 
-![image-20240915184757450](./images/2024-09-15-7-Neural networks/image-20240915184757450.png)
+![image-20240915184757450](https://cdn.jsdelivr.net/gh/gagyeomkim/gagyeomkim.github.io@master/images/2024-09-15-7-Neural%20networks/image-20240915184757450.png){: .align-center}
 
 중간의 layer처럼 한 layer에 여러개의 neuron이 있을 수도 있고, 오른쪽의 layer처럼 1개의 neuron만을 포함할 수도 있다.
 
@@ -176,12 +176,12 @@ neural network적 용어로 말하자면, 우리는 각 뉴런들을 **layer**�
 
 예를 들어, 아래와 같이 중간에 있는 layer의 각 neuron은 이전 계층인 input layer의 모든 feature에 접근할 수 있게 되며, 이후 파라미터를 적절하게 설정하여 원하는 activation과 관련이 있는 일부 기능에만 집중하는 방법을 사용한다.
 
-![image-20240915184812632](./images/2024-09-15-7-Neural networks/image-20240915184812632.png)
+![image-20240915184812632](https://cdn.jsdelivr.net/gh/gagyeomkim/gagyeomkim.github.io@master/images/2024-09-15-7-Neural%20networks/image-20240915184812632.png){: .align-center}
 
 neural network의 표기법과 설명을 더욱 단순화 하기 위해 위의 입력 feature 4개를 $\vec{x}$로 표현할 것이고, 
 3개의 activation value 또한 최종 output layer에 공급되는 또다른 **vector(**$\vec{a}$**)**로 표현할 수 있다.
 
-![image-20240915184823745](./images/2024-09-15-7-Neural networks/image-20240915184823745.png)
+![image-20240915184823745](https://cdn.jsdelivr.net/gh/gagyeomkim/gagyeomkim.github.io@master/images/2024-09-15-7-Neural%20networks/image-20240915184823745.png){: .align-center}
 
 또한, 중간에 존재하는 layer를 "**hidden layer**"라고 부른다.
 
@@ -199,7 +199,7 @@ neural network의 직관에 도움을 주는 또다른 것은
 
 activation을 input으로 받아들이는 logistic regression unit이 존재한다는 점이다.
 
-![image-20240915184835782](./images/2024-09-15-7-Neural networks/image-20240915184835782.png)
+![image-20240915184835782](https://cdn.jsdelivr.net/gh/gagyeomkim/gagyeomkim.github.io@master/images/2024-09-15-7-Neural%20networks/image-20240915184835782.png){: .align-center}
 
 price, shipping cost 등 본래의 feature를 사용하는 대신 이를 조합해 affordability, awareness와 같은 feature를 사용하는 것이 최종 output을 구하는데 더 나은 방법이 된다. 이는 이전 시간에 공부했던 feature engineering이며, 이전 시간에 feature engineering을 수동으로 계산했던 것과 다르게 neural network는 feature engineering을 수동으로 할 필요없이 스스로 feature를 학습하고 problem을 해결한다.
 
@@ -211,7 +211,7 @@ hidden layer가 두 개 이상 있는 예시를 살펴보자.
 
 > 아래와 같이 hidden layer가 몇개이고 hidden layer안에 neuron이 몇개인지에 대한 것은 neural network architecture의 문제이다.
 
-![image-20240915184848774](./images/2024-09-15-7-Neural networks/image-20240915184848774.png)
+![image-20240915184848774](https://cdn.jsdelivr.net/gh/gagyeomkim/gagyeomkim.github.io@master/images/2024-09-15-7-Neural%20networks/image-20240915184848774.png){: .align-center}
 
 먼저 왼쪽을 살펴보면 2개의 hidden layer를 가지고 있다.
 
@@ -237,7 +237,7 @@ neural network를 computer vision에 어떻게 적용할 수 있을까?
 
 아래와 같이 사진을 입력받아 사진 속 인물의 신원을 출력하는 neural network를 훈련시켜 얼굴 인식 애플리케이션을 개발한다고 가정해보자
 
-![image-20240915184902456](./images/2024-09-15-7-Neural networks/image-20240915184902456.png)
+![image-20240915184902456](https://cdn.jsdelivr.net/gh/gagyeomkim/gagyeomkim.github.io@master/images/2024-09-15-7-Neural%20networks/image-20240915184902456.png){: .align-center}
 
 해당 이미지의 크기는 1000x1000px이며 이는 pixel intensity(픽셀 강도)의 1000x1000 matrix라고도 한다.
 
@@ -251,7 +251,7 @@ neural network를 computer vision에 어떻게 적용할 수 있을까?
 
 이를 위해 neural network는 아래와 같이 구성한다.
 
-![image-20240915184915493](./images/2024-09-15-7-Neural networks/image-20240915184915493.png)
+![image-20240915184915493](https://cdn.jsdelivr.net/gh/gagyeomkim/gagyeomkim.github.io@master/images/2024-09-15-7-Neural%20networks/image-20240915184915493.png){: .align-center}
 
 첫번째 hidden layer에서는 일부 특징을 추출하고, 출력값은 두번째 hidden layer의 input으로 들어가게 된다. 이와 같은 과정을 반복하면 output layer에서 최종적인 확률을 추정해낸다.
 
@@ -267,17 +267,17 @@ neural network는 여러 hidden layer에서 이러한 feature를 혼자서 학�
 
 예를들어 첫번째 layer에서 선을, 두번째 layer에서는 얼굴 부분을, 세번째 layer에서는 완전한 얼굴 모양을 찾으라고 한 사람은 아무도없으며, neural network가 data를 통해 이 모든 것을 스스로 알아낸다.
 
-<img src="./images/2024-09-15-7-Neural networks/image-20240915184930553.png" alt="image-20240915184930553" style="zoom:67%;" />
+<img src="https://cdn.jsdelivr.net/gh/gagyeomkim/gagyeomkim.github.io@master/images/2024-09-15-7-Neural%20networks/image-20240915184930553.png" alt="image-20240915184930553" style="zoom:67%;" />{: .align-center}
 
 주의 해야할 점은 해당 시각화에서는 각 hidden layer에 따라 비교적 작은 window(확대된 사진)에서 더 큰 window로 나아가고 있다는 점으로, 위와 같이 작게 표시된 activation들은 2번째 사진처럼 hidden layer에 따라 다른 사이즈의 영역들을 가지고 있다는 점이다.(activation의 scaling을 맞춰서 위처럼 표현한 것 뿐이다.)
 
-![image-20240915184944261](./images/2024-09-15-7-Neural networks/image-20240915184944261.png)
+![image-20240915184944261](https://cdn.jsdelivr.net/gh/gagyeomkim/gagyeomkim.github.io@master/images/2024-09-15-7-Neural%20networks/image-20240915184944261.png){: .align-center}
 
 ---
 
 이번에는 다른 dataset으로 훈련시켜보자.
 
-![image-20240915185004634](./images/2024-09-15-7-Neural networks/image-20240915185004634.png)
+![image-20240915185004634](https://cdn.jsdelivr.net/gh/gagyeomkim/gagyeomkim.github.io@master/images/2024-09-15-7-Neural%20networks/image-20240915185004634.png){: .align-center}
 
 동일한 learning algorithm으로 자동차 탐지를 요청하면 경계선 -> 자동차 부품 -> 자동차 형태 감지의 순으로 학습을 시도한다.
 
@@ -289,13 +289,13 @@ neural network는 여러 hidden layer에서 이러한 feature를 혼자서 학�
 
 위에서 진행한 demand prediction 예제를 가지고 와서 neural network layer가 어떻게 작동하는지를 이해해보자.
 
-![image-20240915185020375](./images/2024-09-15-7-Neural networks/image-20240915185020375.png)
+![image-20240915185020375](https://cdn.jsdelivr.net/gh/gagyeomkim/gagyeomkim.github.io@master/images/2024-09-15-7-Neural%20networks/image-20240915185020375.png){: .align-center}
 
 3개의 neuron으로 구성된 hidden layer에 4개의 input feature를 설정한 다음 하나의 neuron(single neuron)이 있는 output layer로 출력을 보내는 형식이다.
 
 hidden layer를 확대해서 계산과정을 살펴보자
 
-![image-20240915185030841](./images/2024-09-15-7-Neural networks/image-20240915185030841.png)
+![image-20240915185030841](https://cdn.jsdelivr.net/gh/gagyeomkim/gagyeomkim.github.io@master/images/2024-09-15-7-Neural%20networks/image-20240915185030841.png){: .align-center}
 
 hidden layer는 4개의 숫자를 input으로 받고, 4개의 숫자 모두 3개의 뉴런에 각각 input으로 들어간다.
 
@@ -323,7 +323,7 @@ logistic regression에 따라서 activation value가 계산되고, activation에
 
 일반적으로 input layer를 layer 0, 그 다음의 hidden layer를 neural network의 layer 1이라고 하며, 그 다음의 layer(output layer)를 layer2라고 한다. 
 
-![image-20240915185042472](./images/2024-09-15-7-Neural networks/image-20240915185042472.png)
+![image-20240915185042472](https://cdn.jsdelivr.net/gh/gagyeomkim/gagyeomkim.github.io@master/images/2024-09-15-7-Neural%20networks/image-20240915185042472.png){: .align-center}
 
 예를들어, 위의 사진의 계산식은 layer 1에 관한 것이므로 $\vec{w}_1^{[1]}$과 같이 나타낸다.
 
@@ -339,7 +339,7 @@ $\vec{w}_1^{[2]}$면 layer 2에 대한 quantity를 의미한다.
 
 이제 layer 2의 계산을 확대해보자.
 
-![image-20240915185101412](./images/2024-09-15-7-Neural networks/image-20240915185101412.png)
+![image-20240915185101412](https://cdn.jsdelivr.net/gh/gagyeomkim/gagyeomkim.github.io@master/images/2024-09-15-7-Neural%20networks/image-20240915185101412.png){: .align-center}
 
 방금 계산한 activation vector가 layer 2의 input으로 전달되었다. output layer에는 neuron이 하나뿐이므로 위와 같이 하나의 sigmoid함수만으로 나타낸다. 하나의 neuron만을 가지므로 하나의 activation value를 가지며 vector가 아닌 scalar로 표현된다.
 
@@ -349,7 +349,7 @@ $\vec{w}_1^{[2]}$면 layer 2에 대한 quantity를 의미한다.
 
 이제 마지막 단계를 확인해보자.
 
-![image-20240915185112023](./images/2024-09-15-7-Neural networks/image-20240915185112023.png)
+![image-20240915185112023](https://cdn.jsdelivr.net/gh/gagyeomkim/gagyeomkim.github.io@master/images/2024-09-15-7-Neural%20networks/image-20240915185112023.png){: .align-center}
 
 threshold를 0.5로 설정하고 이용하여 output layer의 activation value가 0.5이상이라면 1로, 아니라면 0이될 것이라고 prediction을 만들 수 있다. 이를 통해 category(또는 class)를 분류해내는 것이 가능하다.
 
@@ -359,7 +359,7 @@ threshold를 0.5로 설정하고 이용하여 output layer의 activation value�
 
 이제 조금 더 복잡한 neural networks를 살펴보자.
 
-![image-20240915185123219](./images/2024-09-15-7-Neural networks/image-20240915185123219.png)
+![image-20240915185123219](https://cdn.jsdelivr.net/gh/gagyeomkim/gagyeomkim.github.io@master/images/2024-09-15-7-Neural%20networks/image-20240915185123219.png){: .align-center}
 
 해당 neural networks에서는 input layer를 제외하고 4개의 layer가 있다.
 
@@ -369,7 +369,7 @@ layer 0은 input layer, layer 1, 2, 3은 hidden layer고, layer 4는 output laye
 
 layer 3를 확대해서 해당 layer의 계산을 살펴보겠다.
 
-![image-20240915185134764](./images/2024-09-15-7-Neural networks/image-20240915185134764.png)
+![image-20240915185134764](https://cdn.jsdelivr.net/gh/gagyeomkim/gagyeomkim.github.io@master/images/2024-09-15-7-Neural%20networks/image-20240915185134764.png){: .align-center}
 
 앞서 살펴본 것과 마찬가지로, 각 neuron(unit이라고도 한다)과 layer에 따라 첨자를 붙였으며, activation value에도 첨자를 붙여 layer3와 관련된 activaton라는 것을 나타내고 있음을 보여준다. 
 
@@ -379,7 +379,7 @@ la- er 3에 input으로 들어온 값은 layer 2의 output이기 때문에 input
 
 #### #Quiz
 
-![image-20240915185148218](./images/2024-09-15-7-Neural networks/image-20240915185148218.png)
+![image-20240915185148218](https://cdn.jsdelivr.net/gh/gagyeomkim/gagyeomkim.github.io@master/images/2024-09-15-7-Neural%20networks/image-20240915185148218.png){: .align-center}
 
 알맞은 것을 고르는 것이었다.
 
@@ -389,7 +389,7 @@ la- er 3에 input으로 들어온 값은 layer 2의 output이기 때문에 input
 
 #### \- Notation
 
-![image-20240915185201718](./images/2024-09-15-7-Neural networks/image-20240915185201718.png)
+![image-20240915185201718](https://cdn.jsdelivr.net/gh/gagyeomkim/gagyeomkim.github.io@master/images/2024-09-15-7-Neural%20networks/image-20240915185201718.png){: .align-center}
 
 즉 위와 같은 방법 식으로 나타낸다.
 
@@ -397,7 +397,7 @@ la- er 3에 input으로 들어온 값은 layer 2의 output이기 때문에 input
 
 함수 $g$(sigmoid function)는 activation value를 출력하기 때문에 **activation** **function**(활성화 함수)라고도 불린다.
 
-![image-20240915185216916](./images/2024-09-15-7-Neural networks/image-20240915185216916.png)
+![image-20240915185216916](https://cdn.jsdelivr.net/gh/gagyeomkim/gagyeomkim.github.io@master/images/2024-09-15-7-Neural%20networks/image-20240915185216916.png){: .align-center}
 
 또한 activation에 대한 표기법을 동일하게 나타내기 위해서 위와 같이 input vector x를 $\vec{a}^{[0]}$로 나타낸다.
 
@@ -411,7 +411,7 @@ la- er 3에 input으로 들어온 값은 layer 2의 output이기 때문에 input
 
 해당 예제는 binary classification으로 표현할 수 있다.
 
-![image-20240915185328403](./images/2024-09-15-7-Neural networks/image-20240915185328403.png)
+![image-20240915185328403](https://cdn.jsdelivr.net/gh/gagyeomkim/gagyeomkim.github.io@master/images/2024-09-15-7-Neural%20networks/image-20240915185328403.png){: .align-center}
 
 각 이미지는 8x8 pixel intensity로 구성된 matrix이다.
 
@@ -419,7 +419,7 @@ la- er 3에 input으로 들어온 값은 layer 2의 output이기 때문에 input
 
 이 64개의 input feature을 고려해서 두개의 hidden layer가 있는 신경망을 사용해보겠다.
 
-![image-20240915185341888](./images/2024-09-15-7-Neural networks/image-20240915185341888.png)
+![image-20240915185341888](https://cdn.jsdelivr.net/gh/gagyeomkim/gagyeomkim.github.io@master/images/2024-09-15-7-Neural%20networks/image-20240915185341888.png){: .align-center}
 
 25개의 unit을 가진 layer는 25개의 activation value를,
 
@@ -427,7 +427,7 @@ la- er 3에 input으로 들어온 값은 layer 2의 output이기 때문에 input
 
 앞서 설펴봤던 표기법으로 이를 나타냈다.
 
-![image-20240915185354694](./images/2024-09-15-7-Neural networks/image-20240915185354694.png)
+![image-20240915185354694](https://cdn.jsdelivr.net/gh/gagyeomkim/gagyeomkim.github.io@master/images/2024-09-15-7-Neural%20networks/image-20240915185354694.png){: .align-center}
 
 이후의 step은 threshold를 사용하여 $\vec{a}^{[3]}$를 계산하는 것이다.
 
