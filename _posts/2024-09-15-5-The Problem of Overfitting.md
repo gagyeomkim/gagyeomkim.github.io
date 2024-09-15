@@ -22,7 +22,7 @@ Overfitting이란 무엇일까? linear regression에서 사용했던 주택 가�
 
  input feature x는 주택 size이고 y는 주택 price의 예측값이다.
 
-![image-20240915180244240](./images/2024-09-15-5-The Problem of Overfitting/image-20240915180244240.png)
+![image-20240915180244240](https://cdn.jsdelivr.net/gh/gagyeomkim/gagyeomkim.github.io@master/images/2024-09-15-5-The%20Problem%20of%20Overfitting/image-20240915180244240.png){: .align-center}
 
 ---
 
@@ -55,7 +55,7 @@ training set에 너무 잘 맞기 때문에, training set에 없는 새로운 ex
 
 최종적으로 **machine learning의 목표는 underfitting도, overfitting도 없는 model을 찾는 것**이라고 할 수 있다.
 
-![image-20240915180306695](./images/2024-09-15-5-The Problem of Overfitting/image-20240915180306695.png)
+![image-20240915180306695](https://cdn.jsdelivr.net/gh/gagyeomkim/gagyeomkim.github.io@master/images/2024-09-15-5-The%20Problem%20of%20Overfitting/image-20240915180306695.png){: .align-center}
 
 Classification에도 overfitting이 적용되기도 한다.
 
@@ -83,7 +83,7 @@ overfitting 문제를 해결하기 위한 두번째 방법은 사용할 수 있�
 
 즉, **너무 많은 polynomial feature를 사용하지 않고 유용한 feature만 고르는 것**이다.
 
-![image-20240915180325929](./images/2024-09-15-5-The Problem of Overfitting/image-20240915180325929.png)
+![image-20240915180325929](https://cdn.jsdelivr.net/gh/gagyeomkim/gagyeomkim.github.io@master/images/2024-09-15-5-The%20Problem%20of%20Overfitting/image-20240915180325929.png){: .align-center}
 
 관련성이 높은 feature들만 선택한다면 model이 더이상 overfitting하지 않을 수 있으며,
 
@@ -95,7 +95,7 @@ feature selection의 한가지 단점은 일부 feature만 사용함으로써 �
 
 Overfitting을 줄이기 위한 3번째 방법이 바로 Regularization(정규화)이다.
 
-![image-20240915180348034](./images/2024-09-15-5-The Problem of Overfitting/image-20240915180348034.png)
+![image-20240915180348034](https://cdn.jsdelivr.net/gh/gagyeomkim/gagyeomkim.github.io@master/images/2024-09-15-5-The%20Problem%20of%20Overfitting/image-20240915180348034.png){: .align-center}
 
 위에서 알아본 feature selection은 일부 feature를 제거함으로써(또는 feature의 값을 0으로 설정함으로써) overfitting을 해결했다. Regularization은 일부 feature를 제거하는 극단적인 조치를 취하지 않고도 일부 feature의 영향을 좀 더 완만하게 줄일 수 있다.
 
@@ -109,7 +109,7 @@ Regularization을 통해 결국 training set에 더 잘 맞는 곡선이 만들�
 
 파라미터 b는 regularization하든 안하든 거의 차이가 없기 때문이다.
 
-<img src="./images/2024-09-15-5-The Problem of Overfitting/image-20240915180401176.png" alt="image-20240915180401176" style="zoom: 50%;" />
+<img src="https://cdn.jsdelivr.net/gh/gagyeomkim/gagyeomkim.github.io@master/images/2024-09-15-5-The%20Problem%20of%20Overfitting/image-20240915180401176.png" alt="image-20240915180401176" style="zoom: 50%;" />
 
 즉 overfitting을 해결하는 세가지 방법은 아래와 같다.
 
@@ -123,7 +123,7 @@ Regularization을 통해 결국 training set에 더 잘 맞는 곡선이 만들�
 
 고차 polynomial을 fitting하면 아래와 같이 overfitting된 곡선이 생길 확률이 높다는 것을 위에서 알아봤다.
 
-![image-20240915180418557](./images/2024-09-15-5-The Problem of Overfitting/image-20240915180418557.png)
+![image-20240915180418557](https://cdn.jsdelivr.net/gh/gagyeomkim/gagyeomkim.github.io@master/images/2024-09-15-5-The%20Problem%20of%20Overfitting/image-20240915180418557.png){: .align-center}
 
 만약 파라미터 $w\_3$와 $w\_4$를 매우 작게 만들 방법이 있다고 가정해보자.
 
@@ -137,7 +137,7 @@ cost function을 최소화하려는 경우 유일한 방법은 $w\_3$와 $w\_4$�
 
 ---
 
-![image-20240915180434951](./images/2024-09-15-5-The Problem of Overfitting/image-20240915180434951.png)
+![image-20240915180434951](https://cdn.jsdelivr.net/gh/gagyeomkim/gagyeomkim.github.io@master/images/2024-09-15-5-The%20Problem%20of%20Overfitting/image-20240915180434951.png){: .align-center}
 
 Regularization의 기본 개념은 **파라미터의 값이 더 작은 것**은 **더 단순한 model을 만드는 것**과 비슷하다는 것이다.
 
@@ -151,7 +151,7 @@ Regularization의 기본 개념은 **파라미터의 값이 더 작은 것**은 
 
 어떤 파라미터가 중요한 파라미터가 될지 모르기 때문에 모든 파라미터에 약간의 panalty를 주고 모든 파라미터 값을 축소해보겠다.
 
-![image-20240915180453155](./images/2024-09-15-5-The Problem of Overfitting/image-20240915180453155.png)
+![image-20240915180453155](https://cdn.jsdelivr.net/gh/gagyeomkim/gagyeomkim.github.io@master/images/2024-09-15-5-The%20Problem%20of%20Overfitting/image-20240915180453155.png){: .align-center}
 
 Regularization이 적용된 cost function의 식은 위와 같다.
 
@@ -165,7 +165,7 @@ lambda의 값이 커지면, 알고리즘은 cost function을 최소화하기 위
 > 1\. lambda에 적합한 값을 선택하는 과정을 더 쉽게 만들기 위해 첫째항처럼 둘째항도 **$\\frac{1}{2}$로 나누어 같은방식으로 scaling** 한다.  
 > 2\. 파라미터 b가 매우 크다고 해서 **b를 regularization하지는 않는다**. 실제로 b에 regularization을 적용하든 안하든 차이가 거의 없기 때문이다.
 
-![image-20240915180505842](./images/2024-09-15-5-The Problem of Overfitting/image-20240915180505842.png)
+![image-20240915180505842](https://cdn.jsdelivr.net/gh/gagyeomkim/gagyeomkim.github.io@master/images/2024-09-15-5-The%20Problem%20of%20Overfitting/image-20240915180505842.png){: .align-center}
 
 수정된 cost function에 대해서 조금 더 살펴보자면, mean squared error를 최소화함으로서 training set에 알고리즘이 잘 맞출 수 있게 되며, Regularization term을 최소화함으로써 파라미터 $w\_j$가 작게 유지되어 overfitting이 줄어들 수 있다.
 
@@ -177,7 +177,7 @@ lambda의 값이 커지면, 알고리즘은 cost function을 최소화하기 위
 
 linear regression을 이용한 주택 가격 예측 예제를 사용해보자.
 
-![image-20240915180523260](./images/2024-09-15-5-The Problem of Overfitting/image-20240915180523260.png)
+![image-20240915180523260](https://cdn.jsdelivr.net/gh/gagyeomkim/gagyeomkim.github.io@master/images/2024-09-15-5-The%20Problem%20of%20Overfitting/image-20240915180523260.png){: .align-center}
 
 lambda에 0을 사용하면 regularization term에 0을 곱하기 때문에 regularization term을 전혀 사용하지 않게 된다.
 
@@ -199,7 +199,7 @@ lambda가 매우매우 거대하다면 regularization term의 비중이 너무 �
 
 lambda는 regularization parameter이고, regularization이 적용된 cost function을 최소화하는 파라미터 w,b를 찾아야한다.
 
-![image-20240915180535909](./images/2024-09-15-5-The Problem of Overfitting/image-20240915180535909.png)
+![image-20240915180535909](https://cdn.jsdelivr.net/gh/gagyeomkim/gagyeomkim.github.io@master/images/2024-09-15-5-The%20Problem%20of%20Overfitting/image-20240915180535909.png){: .align-center}
 
 regularize된 linear regression update 식은 기존과 똑같으며, cost J가 다르게 정의되기에 관련된 derivative(도함수) term이 다르게 정의된다. $w\_j$의 derivative term에서는 새롭게 regularization term을 미분한 값이 더해지지만, $b$에는 regularization적용하지 않으므로 derivative term은 그대로 유지된다. 
 
@@ -211,11 +211,11 @@ regularize된 linear regression update 식은 기존과 똑같으며, cost J가 
 
 해당 derivative term을 update 식에 대입하면 아래와 같은 식으로 바뀐다. 
 
-![image-20240915180548592](./images/2024-09-15-5-The Problem of Overfitting/image-20240915180548592.png)
+![image-20240915180548592](https://cdn.jsdelivr.net/gh/gagyeomkim/gagyeomkim.github.io@master/images/2024-09-15-5-The%20Problem%20of%20Overfitting/image-20240915180548592.png){: .align-center}
 
 $w\_j$에 대한 위의 식을 풀면 아래와 같이 나타낼 수 있다.
 
-![image-20240915180604183](./images/2024-09-15-5-The Problem of Overfitting/image-20240915180604183.png)
+![image-20240915180604183](https://cdn.jsdelivr.net/gh/gagyeomkim/gagyeomkim.github.io@master/images/2024-09-15-5-The%20Problem%20of%20Overfitting/image-20240915180604183.png){: .align-center}
 
 즉 $w\_j$에는 새로운 항이 곱해지게 되며, 해당 값에서 일반적인 update식을 뺀 값이 된다.
 
@@ -231,7 +231,7 @@ $m$은 training set의 크기(example 개수)이며 50이라고 가정해보자.
 
 ### \- derivative term 계산법
 
-![image-20240915180619522](./images/2024-09-15-5-The Problem of Overfitting/image-20240915180619522.png)
+![image-20240915180619522](https://cdn.jsdelivr.net/gh/gagyeomkim/gagyeomkim.github.io@master/images/2024-09-15-5-The%20Problem%20of%20Overfitting/image-20240915180619522.png){: .align-center}
 
 **편미분**을 이용해 계산한다.
 
@@ -267,7 +267,7 @@ $$2\*w\_1+ 0 + 0.. 0$$
 
 ## Regularization to Reduce overfitting
 
-![image-20240915180640297](./images/2024-09-15-5-The Problem of Overfitting/image-20240915180640297.png)
+![image-20240915180640297](https://cdn.jsdelivr.net/gh/gagyeomkim/gagyeomkim.github.io@master/images/2024-09-15-5-The%20Problem%20of%20Overfitting/image-20240915180640297.png){: .align-center}
 
 logisitc regression에서 z가 고차 polynomial이면 decision boundary가 지나치게 복잡해지는 overfitting이 일어날수 있었다.
 
@@ -277,7 +277,7 @@ regularization term을 사용하면 많은 파라미터가 포함된 고차 poly
 
 logistic regression에서도 gradient descent를 사용해보자.
 
-![image-20240915180657669](./images/2024-09-15-5-The Problem of Overfitting/image-20240915180657669.png)
+![image-20240915180657669](https://cdn.jsdelivr.net/gh/gagyeomkim/gagyeomkim.github.io@master/images/2024-09-15-5-The%20Problem%20of%20Overfitting/image-20240915180657669.png){: .align-center}
 
 linear regression과 마찬가지로 $w\_j$에 대한 derivative term이 추가적인 항을 얻게되며,
 
