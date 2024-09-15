@@ -53,7 +53,7 @@ logistic regression에 Mean Squared error cost function을 이용하여 plotting
 
 즉, Loss는 **제곱 오차의 1/2배**한 식을 나타내며, 이를 식으로 나타내면 아래와 같다.
 
- $$L( f\_{w,b}(x^{(i)} ,y^{(i)}) = \\frac{1}{2m}(f\_{w,b}(x^{(i)}) - y^{(i)})^2 $$ 
+$$ L(f_{w,b}(x^{(i)}, y^{(i)})) = \frac{1}{2m} \left( f_{w,b}(x^{(i)}) - y^{(i)} \right)^2 $$
 
 > loss와 cost를 헷갈리지 말자!  
 > loss function은 하나의 training example에서 계산한 값이며,  
