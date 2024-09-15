@@ -28,6 +28,8 @@ Neural networks가 처음 발명되었을 때 원래의 동기는 생물학적 �
 
 2005년경부터 다시 resurgence(부활)하였으며, deep learning이라는 주제 안에 포함되어 speech(음성인식) -> images(컴퓨터 비전) -> text(nlp)로 크게 발전해왔다.
 
+<br>
+
 그렇다면 neural network의 모티브가 된 뇌는 어떻게 작동할까?
 
 ![image-20240915184602966](https://cdn.jsdelivr.net/gh/gagyeomkim/gagyeomkim.github.io@master/images/2024-09-15-7-Neural%20networks/image-20240915184602966.png){: .align-center}
@@ -37,6 +39,8 @@ Neural networks가 처음 발명되었을 때 원래의 동기는 생물학적 �
 인간의 모든 생각은 뇌와 뇌에 있는 뉴런에서 비롯된다.
 
 뉴런은 전기자극을 보내고 때로는 다른 뉴런과 새로운 연결을 형성한다.
+
+<br>
 
 뉴런들은 여러 전기자극을 input으로 받아 계산을 수행한 다음, 도출된 output을 다른 뉴런에 보내며, 해당 output은 다른 뉴런의 input이 될 수 있다.
 
@@ -66,15 +70,15 @@ neuron이 하는 일은 몇가지 입력을 받는 것이다.
 
 1개 또는 더 많은 입력(숫자)을 받으며 계산 이후 또 다른 숫자를 출력하는데, 2번째 neuron의 input이 될 수 있다.
 
+<br>
+
 artificial neural network나 deep learning algorithm을 만들 때는 한번에 하나의 neuron을 만드는 대신
 
 아래와 같이 여러개의 neuron을 동시에 시뮬레이션 하는 경우가 많다.
 
 ![image-20240915184639100](https://cdn.jsdelivr.net/gh/gagyeomkim/gagyeomkim.github.io@master/images/2024-09-15-7-Neural%20networks/image-20240915184639100.png){: .align-center}
 
-해당 neuron들이 총체적으로 하는 일은 몇개의 숫자를 입력하고, 계산을 수행하고, 다른 숫자를 출력하는 것이다.
-
-현재 신경과학에 대한 수준으로는 뇌가 실제로 어떻게 작동하는지에 대해 아직 발견되지 않은 것들이 많으며, 이 때문에 극도로 단순화된 neuron model을 사용한다. 하지만 단순화된 neuron model을 사용하더라도 powerful한 deep learning algorithm을 만들 수 있다.
+해당 neuron들이 총체적으로 하는 일은 몇개의 숫자를 입력하고, 계산을 수행하고, 다른 숫자를 출력하는 것이다.현재 신경과학에 대한 수준으로는 뇌가 실제로 어떻게 작동하는지에 대해 아직 발견되지 않은 것들이 많으며, 이 때문에 극도로 단순화된 neuron model을 사용한다. 하지만 단순화된 neuron model을 사용하더라도 powerful한 deep learning algorithm을 만들 수 있다.
 
 ---
 
@@ -87,6 +91,8 @@ neural network에 대한 아이디어는 수십년 전부터 존재해왔는데,
 지난 몇 십년동안 디지털화의 발전으로 우리가 사용하는 data의 양은 막대하게 커졌다.(Big data라는 용어로 표현한다)
 
 따라서 종이에 기록하지 않고 디지털 기록을 사용하는 경우가 훨씬 많아졌으며, 많은 분야에서 digital data의 양이 폭발적으로 증가했다.
+
+<br>
 
 그로 인해 logistic regression이나 linear regression과 같은 traditional한 ML algorithm에서는 현재 제공할 수 있는 data의 양만큼 확장될 수 없었고, 성능을 높이기가 매우 어려웠다.
 
@@ -102,13 +108,15 @@ Demand Prediction(수요예측)의 예를 들어 neural network의 작동방식�
 
 ![image-20240915184705354](https://cdn.jsdelivr.net/gh/gagyeomkim/gagyeomkim.github.io@master/images/2024-09-15-7-Neural%20networks/image-20240915184705354.png){: .align-center}
 
-해당 예시에서는 티셔츠를 판매하고 있는데, 특정한 티셔츠가 베스트셀러가 될지 아닌지를 알고 싶다고 가정한다.
+해당 예시에서는 티셔츠를 판매하고 있는데, 특정한 티셔츠가 베스트셀러가 될지 아닌지를 알고 싶다고 가정한다.많이 팔릴 수 있는 가능성이 있는 제품을 알고 있다면, 해당 재고를 미리 구매하려는 계획을 세울 수 있기 때문이다.
 
-많이 팔릴 수 있는 가능성이 있는 제품을 알고 있다면, 해당 재고를 미리 구매하려는 계획을 세울 수 있기 때문이다.
+<br>
 
 input feature x는 티셔츠의 price이고, sigmoid function을 fitting하면 위와 같이 표현된다. 이전에는 이것을 learning algorithm의 output으로 $f(x)$로 작성했지만, neural network의 구축에서는 용어를 조금 바꿔 알파벳 $a$로 표현할 것이다.
 
 a는 **activation**(활성화)의 약어이며, **neuron이 하위의 다른 neuron에게 output을 보내는 정도**를 말한다.
+
+<br>
 
 아래와 같이 **하나의 logistic regression unit**은 **하나의(single) neuron의 매우 단순화된 model**로 대응된다. (생물학적 neuron보다 매우 단순한 형태이기 때문에)
 
@@ -117,6 +125,8 @@ a는 **activation**(활성화)의 약어이며, **neuron이 하위의 다른 neu
 neuron이 하는 일은 price를 input으로 받아 위의 공식을 계산해서 a를 출력하는 것이다.
 
 즉, a는 해당 티셔츠가 베스트셀러가 될 확률을 출력한다.
+
+<br>
 
 neural network를 구축하기 위해서는 이러한 neuron을 여러개 가져와서 연결하거나 조합하기만 하면 된다.
 
@@ -138,6 +148,8 @@ neural network를 구축하기 위해서는 이러한 neuron을 여러개 가져
 
 awareness는 marketing과, perceived quality는 material, price(가격이 높으면 고품질로 인식하는 경우가 있다)와 관련있다.
 
+<br>
+
 해당 요인들과 관련된 각각의 인공 neuron을 만들어 추정해보겠다. 
 
 affordability, awareness, perceived quality에 대한 추정치를 바탕으로 세 뉴런의 output을 오른쪽에 있는 다른 neuron에 연결하면 또다른 logistic regression unit이 생기게 되는 것과 같으며, 최종적인 output을 출력해낼 수 있게 된다.(티셔츠가 베스트셀러가 될 확률)
@@ -158,6 +170,8 @@ neural network적 용어로 말하자면, 우리는 각 뉴런들을 **layer**�
 
 반대로, feature들로 구성된 목록을 **input layer**라고 부른다.
 
+<br>
+
 또한, neural network적 용어로 affordability, awareness, perceived quality를 **activation**이라고 부른다.
 
 또한, 마지막의 출력 확률 또한 최종 neuron의 activation이다.
@@ -165,6 +179,8 @@ neural network적 용어로 말하자면, 우리는 각 뉴런들을 **layer**�
 **하나의 neuron이 하나의 activation을 출력하므로 activation의 개수는 neuron의 개수와 같다.**
 
 (기존의 output을 activation이라고 표현한다고 이해하자)
+
+<br>
 
 즉, 4개의 feature를 사용해서 activation value라고도 하는 새로운 3개의 숫자를 계산하고,
 
@@ -219,11 +235,15 @@ hidden layer가 두 개 이상 있는 예시를 살펴보자.
 
 (하나의 뉴런이 하나의 activation을 출력하므로)
 
+<br>
+
 hidden layer에 neuron이 3개 있으면 3개의 activation으로 구성된 vector가 출력되며,
 
 이 3개의 숫자를 두번째 hidden layer에 입력할 수 있다.
 
 2번째 hidden layer에선 neuron이 2개이므로 2개의 activation으로 구성된 vector가 출력된다.
+
+<br>
 
 오른쪽도 hidden layer가 3개 이상으로 구성되어 있다는 점을 제외하곤 왼쪽과 같다.
 
@@ -247,6 +267,8 @@ neural network를 computer vision에 어떻게 적용할 수 있을까?
 
 (파란색 화살표를 따라 vector가 생성된다)
 
+<br>
+
 즉, 100만 pixel의 feature vector를 input으로 받아서 그림 속 인물의 신원을 출력하는 neural network를 훈련 시킬 수 있어야한다.
 
 이를 위해 neural network는 아래와 같이 구성한다.
@@ -255,13 +277,19 @@ neural network를 computer vision에 어떻게 적용할 수 있을까?
 
 첫번째 hidden layer에서는 일부 특징을 추출하고, 출력값은 두번째 hidden layer의 input으로 들어가게 된다. 이와 같은 과정을 반복하면 output layer에서 최종적인 확률을 추정해낸다.
 
+<br>
+
 수많은 얼굴 이미지를 대상으로 training 하는 neural network를 살펴보고, 해당 hidden layer가 어떤 것에 대한 정보를 담고있는지를 시각화하여 계산을 시도해볼 수 있다.
+
+<br>
 
 1번째 hidden layer의 neuron은 낮은 수직선이나, 가장자리와 같은 방향을 가리키는 작은 "**선**"을 찾는 식이며
 
 2번째 hidden layer는 얼굴의 **일부**를 찾기 위해 많은 선들을 그룹화하는 방법을 학습한다.(눈의 유무, 코끝 등등)
 
 3번째 hidden layer는 얼굴의 여러 부분을 모아 **더 큰 얼굴 모양**의 유무를 감지하며, 사진 속 얼굴이 서로 다른 얼굴 모양과 얼마나 일치하는지를 감지하여 인물의 identity를 판단한다.
+
+<br>
 
 neural network는 여러 hidden layer에서 이러한 feature를 혼자서 학습할 수 있다.
 
@@ -303,6 +331,8 @@ hidden layer는 4개의 숫자를 input으로 받고, 4개의 숫자 모두 3개
 
 첫번째 hidden unit이라는 것을 나타내기 위해서 $\vec{w}_1,b_1$처럼 아래 첨자를 붙인다.
 
+<br>
+
 해당 unit이 하는 일은 activation value $a$를 출력하는 것이다.
 
 logistic regression에 따라서 activation value가 계산되고, activation에도 첫번째 뉴런이라는 것을 나타내기 위해서 $a_1$으로 아래첨자를 붙인다.
@@ -310,6 +340,8 @@ logistic regression에 따라서 activation value가 계산되고, activation에
 첫번째 neuron의 activation은 affordability(경제성)이었으므로 0.3이라는 값은 이 제품이 매우 저렴할 확률이 0.3%라는 것을 의미한다. 
 
 나머지도 2번째 뉴런, 3번째 뉴런임을 나타내기 위해 각 파라미터와 activation value에 아래 첨자를 붙인다.
+
+<br>
 
 위와 같이 각각의 neuron 마다 **개별적인 parameter들이 존재하며, 개별적으로 activation value를 계산한다**는 점을 헷갈리지 않게 해라
 
@@ -329,6 +361,8 @@ logistic regression에 따라서 activation value가 계산되고, activation에
 
 또한, activation에도 위 첨자를 붙여 나타낸다.
 
+<br>
+
 이처럼 layer에 따라 위 첨자로 indexing한 것은 **해당 layer와 관련된 quantity(수량)**을 나타낸다.
 
 예를들어, $\vec{w}_1^{[1]}$면 layer 1에 대한 quantity를 의미하며,
@@ -337,15 +371,21 @@ $\vec{w}_1^{[2]}$면 layer 2에 대한 quantity를 의미한다.
 
 다른 계층의 경우에도 마찬가지이다.
 
+<br>
+
 이제 layer 2의 계산을 확대해보자.
 
 ![image-20240915185101412](https://cdn.jsdelivr.net/gh/gagyeomkim/gagyeomkim.github.io@master/images/2024-09-15-7-Neural%20networks/image-20240915185101412.png){: .align-center}
 
 방금 계산한 activation vector가 layer 2의 input으로 전달되었다. output layer에는 neuron이 하나뿐이므로 위와 같이 하나의 sigmoid함수만으로 나타낸다. 하나의 neuron만을 가지므로 하나의 activation value를 가지며 vector가 아닌 scalar로 표현된다.
 
+<br>
+
 또한, layer 2의 quantity라는 것을 나타내기 위해 activation value, 각 파라미터에 [2]라는 위첨자가 붙은 것을 확인할 수 있다.
 
 여기서 중요한 점은 input의 위첨자는 [2]가 아닌 [1]이라는 것이다.(이는 input이 layer 1의 activation value이기 때문이다.)
+
+<br>
 
 이제 마지막 단계를 확인해보자.
 
@@ -375,7 +415,7 @@ layer 3를 확대해서 해당 layer의 계산을 살펴보겠다.
 
 또한, 각 neuron마다 개별적으로 연산을 수행하고 있다.
 
-la- er 3에 input으로 들어온 값은 layer 2의 output이기 때문에 input의 첨자는 [2]인것도 확인할 수 있다.
+layer 3에 input으로 들어온 값은 layer 2의 output이기 때문에 input의 첨자는 [2]인것도 확인할 수 있다.
 
 #### #Quiz
 
@@ -403,8 +443,6 @@ la- er 3에 input으로 들어온 값은 layer 2의 output이기 때문에 input
 
 이를 이용해 위의 방정식의 input으로 input vector x를  $\vec{a}^{[0]}$로 적용시킬 수 있다.
 
----
-
 ## Inference: making predictions (forward propagation(순방향전파))
 
 손으로 쓴 숫자를 0과 1로 구분하는 예를 사용해보자.
@@ -416,6 +454,8 @@ la- er 3에 input으로 들어온 값은 layer 2의 output이기 때문에 input
 각 이미지는 8x8 pixel intensity로 구성된 matrix이다.
 
 (255는 밝은 흰색 pixel을, 0은 검은색 pixel을 나타낸다)
+
+<br>
 
 이 64개의 input feature을 고려해서 두개의 hidden layer가 있는 신경망을 사용해보겠다.
 
@@ -434,6 +474,8 @@ la- er 3에 input으로 들어온 값은 layer 2의 output이기 때문에 input
 unit(neuron)이 하나뿐이니 $\vec{a}^{[3]}$는 scalr값으로 나타난다. =>  $a_1^{[3]}$
 
 neural network의 출력값이기도 한 $\vec{a}^{[3]}$는 $f(x)$로 쓸 수도 있다.($a=g(z)$이기 때문에, logistic regression이나 linear regression의 출력을 나타내기 위해서는 f(x)를 사용했었다.)
+
+<br>
 
 해당 계산은 왼쪽에서 오른쪽으로 진행되므로 x부터 시작해서  $\vec{a}^{[1]}$,  $\vec{a}^{[2]}$.  $\vec{a}^{[3]}$를 차례로 계산한다.
 
