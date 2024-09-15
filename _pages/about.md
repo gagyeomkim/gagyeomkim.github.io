@@ -6,9 +6,11 @@ comments: false
 ---
 
 <br>
+
 <div style="text-align: center">
-<img src="../images/about/profile.jpg" alt="profile" style="max-width:100%; height: auto;" />
+<img src="https://1drv.ms/i/s!AvDtmE0jTiDWcjY0luuW97jdt-0?embed=1&width=1280&height=854" style="max-width:100%; height: auto;"/>
 </div>
+
 
 > Hello! I am a Konkuk University student who likes security and machine learning. I am deeply interested in the exploration of AI and cybersecurity. If you would like to collaborate or chat about ML & Security, please feel free to contact me.
 >

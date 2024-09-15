@@ -42,7 +42,7 @@ Gradient Descent 알고리즘은 다음과 같은 방법으로 진행된다.
 
 **활모양이나 해먹모양이 아닌 일부 함수 J의 경우 최솟값이 두 개 이상일 수 있다**는 점을 주의하자.
 
-![image-20240915003917149](https://cdn.jsdelivr.net/gh/gagyeomkim/gagyeomkim.github.io@master/images/2024-09-15-1-Gradient%20Descent/image-20240915003917149.png)
+![image-20240915003917149](https://1drv.ms/i/s!AvDtmE0jTiDWgiFnhKHDFCCCF0dT?embed=1&width=1133&height=632)
 
 위의 사진은 신경망 모델을 훈련시킬 때 얻을 수 있는 일종의 Cost Function이다.
 
@@ -68,7 +68,7 @@ Gradient Descent 알고리즘은 다음과 같은 방법으로 진행된다.
 
 ### - Gradient Descent algorithm
 
-![image-20240915004011213](https://cdn.jsdelivr.net/gh/gagyeomkim/gagyeomkim.github.io@master/images/2024-09-15-1-Gradient%20Descent/image-20240915004011213.png)
+![image-20240915004011213](https://1drv.ms/i/s!AvDtmE0jTiDWgiJuGP7PqlzmXFOF?embed=1&width=1080&height=438)
 
 Gradient descent algorithm을 수학적으로 정의하면 위와 같다.
 
@@ -108,7 +108,7 @@ gradient descent 알고리즘의 경우, **수렴(convergence)할 때까지 위�
 
 따라서 왼쪽의 예시처럼 **동시에 update**를 해주어야한다.
 
-![image-20240915004107233](https://cdn.jsdelivr.net/gh/gagyeomkim/gagyeomkim.github.io@master/images/2024-09-15-1-Gradient%20Descent/image-20240915004107233.png)
+![image-20240915004107233](https://1drv.ms/i/s!AvDtmE0jTiDWgiVSDFR3sU-3xUoL?embed=1&width=1135&height=303)
 
 ------
 
@@ -116,13 +116,13 @@ gradient descent 알고리즘의 경우, **수렴(convergence)할 때까지 위�
 
 gradient descent가 어떤 역할을 하는지, 왜 의미가 있는지 알아보자
 
-![image-20240915004122957](https://cdn.jsdelivr.net/gh/gagyeomkim/gagyeomkim.github.io@master/images/2024-09-15-1-Gradient%20Descent/image-20240915004122957.png)
+![image-20240915004122957](https://1drv.ms/i/s!AvDtmE0jTiDWgib_u6QSbiO1lzDz?embed=1&width=1131&height=249)
 
 먼저, 오른쪽처럼 파라미터 1개만 사용하는 예시로 단순화해서 알아보자
 
 단순화시 $w$는 오른쪽과 같은 표현식을 얻게 된다.
 
-![image-20240915004133778](https://cdn.jsdelivr.net/gh/gagyeomkim/gagyeomkim.github.io@master/images/2024-09-15-1-Gradient%20Descent/image-20240915004133778.png)
+![image-20240915004133778](https://1drv.ms/i/s!AvDtmE0jTiDWgicX5659UO1N6y0F?embed=1&width=1131&height=363)
 
 $\frac{\partial}{\partial w}J(w,b)$는 $w$에 대해 $J(w)$에 편미분을 취한 편도함수이다.
 
@@ -132,7 +132,7 @@ $\frac{\partial}{\partial w}J(w,b)$는 $w$에 대해 $J(w)$에 편미분을 취�
 
 learning rate는 항상 양수(positive number)의 값을 가지므로 미분 계수가 양수이면, w는 기존의 값보다 더 작은 값으로 update된다.
 
-![image-20240915004603298](https://cdn.jsdelivr.net/gh/gagyeomkim/gagyeomkim.github.io@master/images/2024-09-15-1-Gradient%20Descent/image-20240915004603298.png)
+![image-20240915004603298](https://1drv.ms/i/s!AvDtmE0jTiDWgjN4mbY75S1kUBme?embed=1&width=1099&height=301)
 
 반면, **미분 계수가 음수(negative number)**라면 w는 기존의 값보다 더 큰 값으로 update된다.
 
@@ -148,15 +148,15 @@ learning rate는 항상 양수(positive number)의 값을 가지므로 미분 �
 
 Learning Rate에 대한 선택은 gradient descent 구현의 효율성에 큰 영향을 미친다.
 
-![image-20240915004200162](https://cdn.jsdelivr.net/gh/gagyeomkim/gagyeomkim.github.io@master/images/2024-09-15-1-Gradient%20Descent/image-20240915004200162.png)
+![image-20240915004200162](https://1drv.ms/i/s!AvDtmE0jTiDWgigHWcZuQYxl02Wp?embed=1&width=1138&height=589)
 
 Learning Rate가 너무 작다면 수렴(Convergence)하는데에 매우 느리고, 너무 크다면 최솟값에 이르지 못해 수렴하지 못하거나 발산(diverge)하는 문제가 발생할 수 있다. 따라서 적절한 Learning rate를 선택하는 것은 매우 중요하다.
 
-![image-20240915004211413](https://cdn.jsdelivr.net/gh/gagyeomkim/gagyeomkim.github.io@master/images/2024-09-15-1-Gradient%20Descent/image-20240915004211413.png)
+![image-20240915004211413](https://1drv.ms/i/s!AvDtmE0jTiDWginZf9TKTvjFShRp?embed=1&width=1133&height=637)
 
 파라미터를 통해 local minimum에 도달했다면, 미분계수 $\frac{\partial}{\partial b}J(w,b)$의 값이 0이 나오기 때문에, **파라미터는 더 이상 update 되지 않으며, 값을 유지하게 된다.**
 
-![image-20240915004229727](https://cdn.jsdelivr.net/gh/gagyeomkim/gagyeomkim.github.io@master/images/2024-09-15-1-Gradient%20Descent/image-20240915004229727.png)
+![image-20240915004229727](https://1drv.ms/i/s!AvDtmE0jTiDWgirRuHL4eIsbJhVs?embed=1&width=1133&height=551)
 
 또한, learning rate가 특정한 값으로 고정되었어도, gradient descent 알고리즘은 local minimum에 도달할 수 있다.
 
@@ -181,17 +181,17 @@ Learning Rate가 너무 작다면 수렴(Convergence)하는데에 매우 느리�
 
 이제 gradient descent를 linear regression에 적용해보자
 
-![image-20240915004250743](https://cdn.jsdelivr.net/gh/gagyeomkim/gagyeomkim.github.io@master/images/2024-09-15-1-Gradient%20Descent/image-20240915004250743.png)
+![image-20240915004250743](https://1drv.ms/i/s!AvDtmE0jTiDWgiudXV0-nYt0Zg56?embed=1&width=1132&height=595)
 
 Gradient Descent algorithm에서 w와 b에 대한 미분계수를 오른쪽과 같은 식으로 바꿔쓸 수 있다.
 
 해당 식은 편미분을 사용해서 도출된다.
 
-![image-20240915004304599](https://cdn.jsdelivr.net/gh/gagyeomkim/gagyeomkim.github.io@master/images/2024-09-15-1-Gradient%20Descent/image-20240915004304599.png)
+![image-20240915004304599](https://1drv.ms/i/s!AvDtmE0jTiDWgix-axLOWZRitIge?embed=1&width=1138&height=563)
 
 $\frac{\partial}{\partial w}J(w,b)$의 경우, J(w,b)는 아래의 식과 같음을 확인했고, 이를 해당 식에 대입한다.
 
-<img src="/images/2024-09-15-1-Gradient Descent/image-20240915004321783.png" alt="image-20240915004321783" style="zoom: 33%;" />
+<img src="https://1drv.ms/i/s!AvDtmE0jTiDWgi39eNvJzfd14nDi?embed=1&width=778&height=167" style="zoom:50%;" />
 
 이후 w에 대한 편미분을 진행하면, 겉미분으로 인해 곱해진 2에해서 분모의 2는 사라지게 된다. 이후 속미분시 w외의 변수도 전부 상수 취급되어 사라지게 되며, w에 곱해져있던 $x^{(i)}$가 식에 곱해진다.
 

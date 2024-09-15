@@ -89,7 +89,7 @@ matrix의 예를 들어 Numpy가 vector와 행렬을 저장하는 방법을 살�
 
 즉 2x3 matrix를 저장하는 코드에서는 아래와 같이 표현한다.
 
-```
+```python
 x=np.array([[1,2,3],
 			[4,5,6]])
 ```
@@ -132,7 +132,7 @@ neural network에서의 propagation을 수행하기 위한 코드를 다시 살�
 
 a1을 출력하면 아래와 같은 내용이 출력된다.
 
-```
+```python
 tf.Tensor([[0.2 0.7 0.3]], shape=(1,3), dtype=float32)
 #[[0.2 0.7 0.3]] : 0.2,0.7,0.3의 element를 가지는 matrix이다.
 #shape=(1,3) : 1x3 matrix이다.
