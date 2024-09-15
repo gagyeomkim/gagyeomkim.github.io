@@ -69,7 +69,7 @@ week1에서 classification에 대해서 알아볼 땐 아래의 모양처럼 하
 
 ![image-20240915015107646](https://cdn.jsdelivr.net/gh/gagyeomkim/gagyeomkim.github.io@master/images/2024-09-15-3-Logistic%20regression%201/image-20240915015107646.png)
 
-기존에 배운 Hypothesis를 통해 $f\_{w,b}(x)=wx+b$라는 식을 세울 수 있다.
+기존에 배운 Hypothesis를 통해 $f_{w,b}(x)=wx+b$라는 식을 세울 수 있다.
 
 Classification 문제를 해결하기 위해 linear regression을 이용해서 시도해 볼 수 있는 것은 **threshold**(임계값)을 설정하는 것이다.
 
@@ -103,7 +103,7 @@ logistic regression에서는 data set에 위와 같은 s자형 곡선을 맞춘�
 
 해당 예제의 경우 보라색 선과 같은 x값을 가진 환자가 들어오면 알고리즘은 0.7을 출력하는데, 이는 악성에 더 가까울 가능성이 높다는 것을 의미한다.
 
-**단, threshold를 거쳐 실제로 결정되는 output label y는 0.7이 아니라 0 또는 1이어야한다. 여기서 출력된 값은 $\\hat y$이다.**
+**단, threshold를 거쳐 실제로 결정되는 output label y는 0.7이 아니라 0 또는 1이어야한다. 여기서 출력된 값은 $\hat y$이다.**
 
 <img src="https://cdn.jsdelivr.net/gh/gagyeomkim/gagyeomkim.github.io@master/images/2024-09-15-3-Logistic%20regression%201/image-20240915015200861.png" alt="image-20240915015200861" style="zoom:67%;" />
 
@@ -119,13 +119,13 @@ Sigmoid Function의 특징은 아래와 같다.
 
 보통 g(z)를 사용하여 이 함수를 나타내는데, 식은 아래와 같다.
 
- $$g(z)=\\frac{1}{1+e^{-z}}$$
+ $$g(z)=\frac{1}{1+e^{-z}}$$
 
 여기서 e는 약 2.7의 값을 갖는 수학 상수이다.
 
 $z$의 값이 매우 클수록 분모가 1에 가깝게 되어 output이 1에 수렴하며,
 
-$z$의 값이 매우 작을수록 분모가 0에 가깝게 되어($\\frac{1}{\\infty}$) output이 $0$으로 수렴하게 된다.
+$z$의 값이 매우 작을수록 분모가 0에 가깝게 되어($\frac{1}{\infty}$) output이 $0$으로 수렴하게 된다.
 
 $z$값이 $0$일때는 $0.5$의 값을 가진다.
 
@@ -143,7 +143,7 @@ linear regression function과 같은 직선함수는 w와 x의 dot product와 b�
 
 이후, 이 z를 sigmoid 함수에 대입하면, $g(z)$는 해당 공식으로 계산된 값을 출력하게 된다.
 
-$$g(z)=\\frac{1}{1+e^{-(\\vec{w} \\cdot \\vec{x}+b)}}$$
+$$g(z)=\frac{1}{1+e^{-(\vec{w} \cdot \vec{x}+b)}}$$
 
 또한, logistic regression의 hypothesis로 g(z)를 사용하므로 $ f(x) = g(z)$ 라고도 나타낼 수 있다.
 
@@ -183,7 +183,7 @@ Logisitc regression의 Hypothesis의 출력값이 y가 1이될 확률을 나타�
 
 우리가 사용할 수 있는 방법은 **threshold**(임계값)을 설정하는 것이다.
 
-일반적인 선택은 threshold를 **0.5**로 선택해서 f(x)(즉, 출력값)가 0.5보다 크거나 같으면 $\\hat y=1$이 되도록 하고, 그렇지 않다면 $\\hat y=0$이 되도록 할 수 있다.
+일반적인 선택은 threshold를 **0.5**로 선택해서 f(x)(즉, 출력값)가 0.5보다 크거나 같으면 $\hat y=1$이 되도록 하고, 그렇지 않다면 $\hat y=0$이 되도록 할 수 있다.
 
 <br>
 
@@ -193,9 +193,9 @@ Logisitc regression의 Hypothesis의 출력값이 y가 1이될 확률을 나타�
 
 Logistic regression의 hypothesis는 Sigmoid function을 사용하므로 $f(x) = g(z)$로 나타낼 수 있다.
 
-따라서 $g(z) \\geq 0.5$로 표현할 수 있으며, 이는 **z값이 $0$ 이상일 때**와 같다.
+따라서 $g(z) \geq 0.5$로 표현할 수 있으며, 이는 **z값이 $0$ 이상일 때**와 같다.
 
-z는 위와 같이 $\\vec{w} \\cdot \\vec{x}+b$로 나타낼 수 있으므로, $\\vec{w} \\cdot \\vec{x}+b\\geq0$일 때 model은 1을 예측한다.
+z는 위와 같이 $\vec{w} \cdot \vec{x}+b$로 나타낼 수 있으므로, $\vec{w} \cdot \vec{x}+b\geq0$일 때 model은 1을 예측한다.
 
 <br>
 
@@ -213,19 +213,19 @@ X가 positive class, O가 negative class를나타내는 training set이다.
 
 feature가 2개이므로 위와 같이 표현식을 잡을 수 있고,
 
-$w\_1$은 1, $w\_2$는 1, $b$는 -3이라고 가정해보자.
+$w_1$은 1, $w_2$는 1, $b$는 -3이라고 가정해보자.
 
 <img src="https://cdn.jsdelivr.net/gh/gagyeomkim/gagyeomkim.github.io@master/images/2024-09-15-3-Logistic%20regression%201/image-20240915015545780.png" alt="image-20240915015545780" style="zoom:67%;" />
 
-**$\\vec{w} \\cdot \\vec{x}+b=0$이 되는 경우** y=1인지 y=0인지에 대해 중립적인 위치(즉, 확률이 0.5인경우 ; z=0인 경우 sigmoid function의 output은 0.5)를 가지게 되며, 이 경우들을 모아서 나타낸 선을 _**Decision boundary**_라고 부른다.
+**$\vec{w} \cdot \vec{x}+b=0$이 되는 경우** y=1인지 y=0인지에 대해 중립적인 위치(즉, 확률이 0.5인경우 ; z=0인 경우 sigmoid function의 output은 0.5)를 가지게 되며, 이 경우들을 모아서 나타낸 선을 _**Decision boundary**_라고 부른다.
 
-$x\_1+x\_2=3$을 만족하는 경우를 나타낸 보라색 선이 Decision boundary이다.
+$x_1+x_2=3$을 만족하는 경우를 나타낸 보라색 선이 Decision boundary이다.
 
 <br>
 
 이 선의 왼쪽에 있으면 logisitc regression은 0을 예측하고, 오른쪽에 있으면 1을 예측하게된다.
 
-**(즉, z가 0보다 크거나 작은 경우를 고려해서 확률로 출력된 output의 $\\hat y$(0또는 1)을 결정한다.)**
+**(즉, z가 0보다 크거나 작은 경우를 고려해서 확률로 출력된 output의 $\hat y$(0또는 1)을 결정한다.)**
 
 > 물론 파라미터를 다른값으로 선택한다면 decision boundary는 다른 선이 될 것이다.
 

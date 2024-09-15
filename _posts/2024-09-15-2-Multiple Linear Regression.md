@@ -20,11 +20,11 @@ typora-root-url: ../
 
 위의 사진은 Multiple features의 예를 든 사진이다.
 
-각 feature를 $X\_1, X\_2, X\_3, X\_4$라는 변수를 사용하여 표시하겠다.
+각 feature를 $X_1, X_2, X_3, X_4$라는 변수를 사용하여 표시하겠다.
 
 > 표기법에 대한 정리는 위를 참고하자. `i`는 **training example**의 index이고, `j`는 **feature**의 index를 의미한다.
 
-즉,  $x\_j^{(i)}$는 `i`번째 training example의 `j`번째 feature를 의미한다.
+즉,  $x_j^{(i)}$는 `i`번째 training example의 `j`번째 feature를 의미한다.
 
 <img src="https://cdn.jsdelivr.net/gh/gagyeomkim/gagyeomkim.github.io@master/images/2024-09-15-2-Multiple%20Linear%20Regression/image-20240915010630665.png" style="zoom:50%;" />
 
@@ -42,7 +42,7 @@ Multiple feature의 경우 모델이 어떻게 정의될지에 대해서도 살�
 
 <br>
 
-$$Previously:  f\_{w,b}(x) = wx+b$$
+$$Previously:  f_{w,b}(x) = wx+b$$
 
 <br>
 
@@ -58,7 +58,7 @@ $$Previously:  f\_{w,b}(x) = wx+b$$
 
 <img src="https://cdn.jsdelivr.net/gh/gagyeomkim/gagyeomkim.github.io@master/images/2024-09-15-2-Multiple%20Linear%20Regression/image-20240915010742024.png" style="zoom:67%;" />
 
-우선,  $w\_1,w\_2,w\_3$부터 $w\_n$까지의 숫자목록을 의미하는 행 벡터를 정의해보자.
+우선,  $w_1,w_2,w_3$부터 $w_n$까지의 숫자목록을 의미하는 행 벡터를 정의해보자.
 
 또한, b는 단일 숫자이므로 벡터 w와 b는 모델의 parameter가 된다.
 
@@ -116,9 +116,9 @@ vectorization에서는 병렬처리 하드웨어를 사용하여 한번에 param
 
 ![image-20240915011032641](https://cdn.jsdelivr.net/gh/gagyeomkim/gagyeomkim.github.io@master/images/2024-09-15-2-Multiple%20Linear%20Regression/image-20240915011032641.png)
 
--   Parameters : w를 별도의 여러 개의 파라미터로 생각하지 않고 $\\vec {w}$처럼 벡터로 모은다. $\\vec {w}$의 길이는 n이된다.
+-   Parameters : w를 별도의 여러 개의 파라미터로 생각하지 않고 $\vec {w}$처럼 벡터로 모은다. $\vec {w}$의 길이는 n이된다.
 -   model : dot product(내적)을 이용하여 model을 update 했다.
--   Cost Function: 여러개의 w 파라미터로 생각하는 대신 $\\vec{w}$ 로 대체했다.
+-   Cost Function: 여러개의 w 파라미터로 생각하는 대신 $\vec{w}$ 로 대체했다.
 -   Gradient descent : 마찬가지로 J의 파라미터 부분을 벡터로 대체했다.
 
 ![image-20240915011102277](https://cdn.jsdelivr.net/gh/gagyeomkim/gagyeomkim.github.io@master/images/2024-09-15-2-Multiple%20Linear%20Regression/image-20240915011102277.png)
@@ -129,7 +129,7 @@ Gradient descent의 경우에는 1개의 feature만을 가질 때와 n개의 fea
 
 <br>
 
-error에 관련된 항은 여전히 $f$에서 target value y를 뺀 값을 취하지만, $\\vec{w}$와 $\\vec{x}$와 같이 vector로 표현하고 오른쪽에 곱해지는 표현식에 $x\_1^{(i)}$처럼 아래 첨자가 생겨서 특정 example( $x\_1^{(i)}$은 반복시로 가정했을 때 j=1)일 때만 해당되는 update 구문이 만들어졌다.
+error에 관련된 항은 여전히 $f$에서 target value y를 뺀 값을 취하지만, $\vec{w}$와 $\vec{x}$와 같이 vector로 표현하고 오른쪽에 곱해지는 표현식에 $x_1^{(i)}$처럼 아래 첨자가 생겨서 특정 example( $x_1^{(i)}$은 반복시로 가정했을 때 j=1)일 때만 해당되는 update 구문이 만들어졌다.
 
 중요한 점은 n개의 feature가 있을 때도  **w와 j를 동시에 update 해야한다**는 것이다.
 
@@ -149,9 +149,9 @@ feature의 값의 범위가 얼마나 큰지와 해당 feature에 곱해지는 �
 
 ![image-20240915011149063](https://cdn.jsdelivr.net/gh/gagyeomkim/gagyeomkim.github.io@master/images/2024-09-15-2-Multiple%20Linear%20Regression/image-20240915011149063.png)
 
-feature $x\_1$은 집의 크기, $x\_2$는 침실의 개수라고 두고 price를 예측해보자.
+feature $x_1$은 집의 크기, $x_2$는 침실의 개수라고 두고 price를 예측해보자.
 
-$x\_1$ 의 범위는 300~2000, $x\_2$ 의 범위는 0~5라고 할 때, 각 feature에 곱해지는 적절한 $w\_1$과 $w\_2$의 값은 어떻게 선택할수 있을까? 
+$x_1$ 의 범위는 300~2000, $x_2$ 의 범위는 0~5라고 할 때, 각 feature에 곱해지는 적절한 $w_1$과 $w_2$의 값은 어떻게 선택할수 있을까? 
 
 위의 사진을 보면 **좋은 model은 feature의 범위가 클수록 작은 파라미터 값을 사용하는 것**을 알 수 있다.
 
@@ -166,9 +166,9 @@ scatter plot(산점도)와 contour plot(등고선도)으로 다시한번 살펴�
 
 <br>
 
-$w\_1$(size)은 범위가 큰 $x\_1$을 곱하기에 아주 조금만 변경하여도 price에 큰 영향을 미치는 반면,
+$w_1$(size)은 범위가 큰 $x_1$을 곱하기에 아주 조금만 변경하여도 price에 큰 영향을 미치는 반면,
 
-$w\_2$은 범위가 작은 $x\_2$를 곱해서 조금만 변경하면 cost에 거의 영향을 미치지 않는다.(Contour plot에서는 타원의 중심에 다가갈 수록 cost가 최소가 된다.)
+$w_2$은 범위가 작은 $x_2$를 곱해서 조금만 변경하면 cost에 거의 영향을 미치지 않는다.(Contour plot에서는 타원의 중심에 다가갈 수록 cost가 최소가 된다.)
 
 ![image-20240915011230088](https://cdn.jsdelivr.net/gh/gagyeomkim/gagyeomkim.github.io@master/images/2024-09-15-2-Multiple%20Linear%20Regression/image-20240915011230088.png)
 
@@ -178,7 +178,7 @@ $w\_2$은 범위가 작은 $x\_2$를 곱해서 조금만 변경하면 cost에 �
 
 이러한 상황에서 유용한 방법은 **feature scale을 조정하는 것**이다.
 
-즉 training set을 변형하여 feature scale을 0에서 1까지의 범위로 조정한다면,$x\_1$과 $x\_2$가 비슷한 범위의 값을 취하게 되어 global minimum에 더 빠르게 도달 할수 있게 된다.  
+즉 training set을 변형하여 feature scale을 0에서 1까지의 범위로 조정한다면,$x_1$과 $x_2$가 비슷한 범위의 값을 취하게 되어 global minimum에 더 빠르게 도달 할수 있게 된다.  
 
 ![image-20240915011300985](https://cdn.jsdelivr.net/gh/gagyeomkim/gagyeomkim.github.io@master/images/2024-09-15-2-Multiple%20Linear%20Regression/image-20240915011300985.png)
 
@@ -190,7 +190,7 @@ $w\_2$은 범위가 작은 $x\_2$를 곱해서 조금만 변경하면 cost에 �
 
 Feature scaling의 기본적인 방법은 **범위의 최댓값으로 해당 feature을 나누는 것**이다. 
 
-또한, $\\frac{x^i-min}{max-min}$을 사용하여 각 feature의 최소와 최대 범위를 rescaling 할 수도 있다.
+또한, $\frac{x^i-min}{max-min}$을 사용하여 각 feature의 최소와 최대 범위를 rescaling 할 수도 있다.
 
 <br>
 
@@ -208,27 +208,27 @@ Feature scaling의 기본적인 방법은 **범위의 최댓값으로 해당 fea
 
 <br>
 
-training set에 있는 $x\_1$의 평균을 600이라고 할때, 이것은 아래와 같이 나타낸다.
+training set에 있는 $x_1$의 평균을 600이라고 할때, 이것은 아래와 같이 나타낸다.
 
-$$\\mu\_1=600$$
+$$\mu_1=600$$
 
-> $\\mu$는 그리스 알파벳으로 \[mu,뮤\]라고 발음한다.
+> $\mu$는 그리스 알파벳으로 \[mu,뮤\]라고 발음한다.
 
-Mean normalization으로 feature scaling을 진행하는 방법은 해당 feature의 값에서  $\\mu\_j$(여기서 j는 feature의 index)의 값을 뺀 뒤, 범위의 (최댓값 - 최솟값)으로 나눠주는 것이다.
+Mean normalization으로 feature scaling을 진행하는 방법은 해당 feature의 값에서  $\mu_j$(여기서 j는 feature의 index)의 값을 뺀 뒤, 범위의 (최댓값 - 최솟값)으로 나눠주는 것이다.
 
 ### \- Z-score normalization
 
 ![image-20240915011359608](https://cdn.jsdelivr.net/gh/gagyeomkim/gagyeomkim.github.io@master/images/2024-09-15-2-Multiple%20Linear%20Regression/image-20240915011359608.png)
 
-$ \\sigma $(표준편차)를 이용한 Z-score normalization(Z-점수 정규화)방법도 존재한다.
+$ \sigma $(표준편차)를 이용한 Z-score normalization(Z-점수 정규화)방법도 존재한다.
 
-먼저, 평균 $ \\mu $를 계산하고, feature에서 $ \\mu\_j $를 뺀 다음, $\\sigma$로 나눠주는 것으로 feature scaling을 진행할 수 있다.
+먼저, 평균 $ \mu $를 계산하고, feature에서 $ \mu_j $를 뺀 다음, $\sigma$로 나눠주는 것으로 feature scaling을 진행할 수 있다.
 
 ![image-20240915011424301](https://cdn.jsdelivr.net/gh/gagyeomkim/gagyeomkim.github.io@master/images/2024-09-15-2-Multiple%20Linear%20Regression/image-20240915011424301.png)
 
 Feature scailing을 진행할 때는 **\-1 ~ 1까지 정도의 범위에서 지정하는 것**이 좋다.
 
-하지만 -3~ 3의 범위 안에 $x\_j$가 존재하거나, -0.3 ~ 0.3의 범위안에  $x\_j$가 존재하는 등 허용가능한 범위 내에서 다양한 것은 전혀 문제가 되지 않는다. **위의 예시는 Feature의 범위가 너무 크거나 작은 경우 rescaling이 필요함을 보여준다.**
+하지만 -3~ 3의 범위 안에 $x_j$가 존재하거나, -0.3 ~ 0.3의 범위안에  $x_j$가 존재하는 등 허용가능한 범위 내에서 다양한 것은 전혀 문제가 되지 않는다. **위의 예시는 Feature의 범위가 너무 크거나 작은 경우 rescaling이 필요함을 보여준다.**
 
 ---
 
@@ -236,7 +236,7 @@ Feature scailing을 진행할 때는 **\-1 ~ 1까지 정도의 범위에서 지�
 
 gradient descent를 실행할 때 수렴 여부에 대해 어떻게 판단할 수 있을까?
 
-주요 단계중 하나는 **learning rate $\\alpha$값을 선택하는 것**이다.
+주요 단계중 하나는 **learning rate $\alpha$값을 선택하는 것**이다.
 
 <img src="https://cdn.jsdelivr.net/gh/gagyeomkim/gagyeomkim.github.io@master/images/2024-09-15-2-Multiple%20Linear%20Regression/image-20240915011450295.png" alt="image-20240915011450295" style="zoom:67%;" />
 
@@ -268,11 +268,11 @@ training set을 기반으로 계산되는 J를 각 iteration마다 plotting함�
 
 또한, Automatic convergence test(자동 수렴 테스트)를 사용할 수도 있다.
 
-$\\epsilon$ 이라는 아주 작은 수를 임계점으로 두고, cost function J가 $\\epsilon$  보다 작다면, convergence하는 것으로 판단하는 것이다. 
+$\epsilon$ 이라는 아주 작은 수를 임계점으로 두고, cost function J가 $\epsilon$  보다 작다면, convergence하는 것으로 판단하는 것이다. 
 
 <br>
 
-올바른 임계값 $\\epsilon$  을 선택하는 것은 매우 어렵기에, Automatic convergence test에 의존하기 보다는 **Learning curve를 통한 직관을 얻는 것이 더 좋다.**
+올바른 임계값 $\epsilon$  을 선택하는 것은 매우 어렵기에, Automatic convergence test에 의존하기 보다는 **Learning curve를 통한 직관을 얻는 것이 더 좋다.**
 
 ---
 
@@ -286,7 +286,7 @@ $\\epsilon$ 이라는 아주 작은 수를 임계점으로 두고, cost function
 
 ![image-20240915011558826](https://cdn.jsdelivr.net/gh/gagyeomkim/gagyeomkim.github.io@master/images/2024-09-15-2-Multiple%20Linear%20Regression/image-20240915011558826.png)
 
-코드에 문제가 있는지 확인하기 위해서는, 충분히 작은 learning rate $\\alpha$를 설정하는 것이다.
+코드에 문제가 있는지 확인하기 위해서는, 충분히 작은 learning rate $\alpha$를 설정하는 것이다.
 
 잘 구현되었다면 cost function J는 매 iteration마다 항상 감소해야한다.
 
@@ -314,8 +314,8 @@ learning rate를 낮추는 것은 debugging을 위해서 자주 사용한다.
 
 주택에 두가지 feature가 있다고 가정해보자
 
--   $x\_1$: frontage(너비)
--   $x\_2$: depth(깊이)
+-   $x_1$: frontage(너비)
+-   $x_2$: depth(깊이)
 
 두가지 feature가 있다면 , 아래와 같은 model을 만들 수 있다.
 
@@ -323,7 +323,7 @@ learning rate를 낮추는 것은 debugging을 위해서 자주 사용한다.
 
 그러나, 이보다 model에서 feature 선택에 대한 효과적인 방법이 존재한다.
 
-area(면적)은 frontage x depth의 값과 같으므로, area(땅 넓이)를 기준으로 price를 예측하는 것이 너비나 깊이를 개별적으로 선택해서 예측하는 것보다 더 효과적임을 알 수 있다. area를 $x\_3$이라는 새로운 feature로 정의함으로써 더욱 정확한 예측을 이끌어 낼 수 있다.
+area(면적)은 frontage x depth의 값과 같으므로, area(땅 넓이)를 기준으로 price를 예측하는 것이 너비나 깊이를 개별적으로 선택해서 예측하는 것보다 더 효과적임을 알 수 있다. area를 $x_3$이라는 새로운 feature로 정의함으로써 더욱 정확한 예측을 이끌어 낼 수 있다.
 
 <img src="https://cdn.jsdelivr.net/gh/gagyeomkim/gagyeomkim.github.io@master/images/2024-09-15-2-Multiple%20Linear%20Regression/image-20240915011741551.png" alt="image-20240915011741551" style="zoom: 67%;" />
 
@@ -363,7 +363,7 @@ Feature engineering을 통해서 직선 뿐 아니라 곡선, 비선형함수를
 
 또 다른 방법으로 x의 제곱근을 사용하는 방법도 있다.
 
-$\\sqrt{x}$의 그래프는 덜 가파르지만 x의 증가에 따라 꾸준하게 증가하고 절대내려오지 않기 때문에 해당 data set에서도 잘 작동할 수 있다.
+$\sqrt{x}$의 그래프는 덜 가파르지만 x의 증가에 따라 꾸준하게 증가하고 절대내려오지 않기 때문에 해당 data set에서도 잘 작동할 수 있다.
 
 ---
 

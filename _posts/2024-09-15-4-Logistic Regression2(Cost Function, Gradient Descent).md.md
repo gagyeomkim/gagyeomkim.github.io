@@ -25,9 +25,9 @@ logisitc regression model은 위와 같은 방정식으로 정의될 수 있는�
 
 linear regression에서 사용했던 Squared error cost function을 살펴보자.
 
-$\\frac {1}{2}$를 summation안에 넣음으로써 식을 약간 변형하였다.
+$\frac {1}{2}$를 summation안에 넣음으로써 식을 약간 변형하였다.
 
-이때의 hypothesis는 $\\vec{w} \\cdot \\vec{x} +b$이다.
+이때의 hypothesis는 $\vec{w} \cdot \vec{x} +b$이다.
 
 linear regression에서는 Squared error cost function을 이용해서 plotting할 때 convex(볼록) 모양의 함수가 나왔음을 기억할 것이다.
 
@@ -68,9 +68,9 @@ loss function은 위와 같은 식으로 정의된다.
 target label y가 1일 때와 0일 때로 나눠서 생각해보자.
 
 > 아래의 식은 hypothesis에 대한 식이다. 기억이 나지 않는다면 전 게시글을 한번 더 살펴보자  
-> $ f\_{\\mathbf{w},b}(\\mathbf{x^{(i)}}) = g(z^{(i)}) $  
-> $ z^{(i)} = \\mathbf{w} \\cdot \\mathbf{x}^{(i)}+ b $  
-> $ g(z^{(i)}) = \\frac{1}{1+e^{-z^{(i)}}} $
+> $ f_{\mathbf{w},b}(\mathbf{x^{(i)}}) = g(z^{(i)}) $  
+> $ z^{(i)} = \mathbf{w} \cdot \mathbf{x}^{(i)}+ b $  
+> $ g(z^{(i)}) = \frac{1}{1+e^{-z^{(i)}}} $
 
 ### \- $y^{(i)}$=1일 때 
 
@@ -86,7 +86,7 @@ logistic regression의 출력값($g(z)$)은 항상 0과 1사이이므로 $f$(=$g
 
 만약 알고리즘의 예측값($f(x)$)이 1에 가까운 값을 가진다면(ex.0.9) loss는 0에 근접할 것이며,
 
-예측값이 0에 가까운 값이라면(ex.0.1) loss는 $\\infty$만큼 커질 것이다.
+예측값이 0에 가까운 값이라면(ex.0.1) loss는 $\infty$만큼 커질 것이다.
 
 (loss는 예측값과 실제값의 차이를 포함하고 있기 때문에)
 
@@ -108,7 +108,7 @@ logistic regression의 출력값($g(z)$)은 항상 0과 1사이이므로 $f$(=$g
 
 f(x)의 예측값이 0에 가까우면(ex.0.1) loss는 0에 근접할 것이고,
 
-f(x)의 예측값이 1에 가깝다면(ex.0.999) loss는 $\\infty$에 근접할 것이다.
+f(x)의 예측값이 1에 가깝다면(ex.0.999) loss는 $\infty$에 근접할 것이다.
 
 즉, f(x)의 예측값이 실제값인 target $y^{(i)}$와 멀수록 더 높은 loss를가지게 될 것이다.
 
@@ -187,7 +187,7 @@ J의 도함수를 계산해서 기존 식에다가 대입하는 방법또한 같
 
 하지만 이 방정식들이 똑같아도 **linear regression이 아닌 이유로는 f(x)(Hypothesis)에 대한 정의가 바뀌었기 때문이다.**
 
-linear regression에서는 $f\_{\\mathbf{w},b}(x^{(i)})=\\vec{w} \\cdot \\vec{x} + b$라는 hypothesis를 가지고 있었지만,
+linear regression에서는 $f_{\mathbf{w},b}(x^{(i)})=\vec{w} \cdot \vec{x} + b$라는 hypothesis를 가지고 있었지만,
 
 logistic regression에서는 hypothesis로 sigmoid함수가 사용된다.
 
