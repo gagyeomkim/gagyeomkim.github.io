@@ -63,13 +63,13 @@ Classification이란 가능한 output의 **작은 집합만을 가지고** **출
 
 <br>
 
-Classification에서는 아래와 같이 출력 클래스가 2개 이상인 Multiclass classification(다중분류)도 가능하다.
+Classification에서는 아래와 같이 출력 클래스가 2개 이상인 **Multiclass classification**(다중분류)도 가능하다.
 
 ![image-20240914185244449](https://cdn.jsdelivr.net/gh/gagyeomkim/gagyeomkim.github.io@master/images/2024-09-14-1-Supervised%20Learning%26Unsupervised%20Learning/image-20240914185244449.png)
 
 >  class는 0,1,2 같은 숫자일 수도 있다.
 >
->  그러나 숫자를 해석할 때 classification는 0,1,2와 같이 가능한 **출력 범주의 작고 유한한 제한된 집합을 예측**하지만 회귀는 가능한 모든 숫자를 예측한다는 점이 다르다.(0.5 또는 1.7...등등)
+>  그러나 숫자를 해석할 때 classification는 0,1,2와 같이 가능한 **출력 범주의 작고 유한한 제한된 집합을 예측**하지만 regression은 가능한 모든 숫자를 예측한다는 점이 다르다.(0.5 또는 1.7...등등)
 >
 >  <br>
 >
@@ -99,7 +99,7 @@ Unsupervised Learning(비지도학습)은 라벨링되어있지 않은 데이터
 
 다시말해, x에 따른 y의 출력을 예측하는 것이 아니라 주어진 **dataset의 구조나 패턴을 찾아내는 것**이다.
 
-### Clustring(군집화)
+### Clustering(군집화)
 
 Clustering이란 각 주어진 data들이 얼마나 유사한지에 따라 데이터를 군집으로 분류하는 것이다.
 
