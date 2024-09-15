@@ -1,6 +1,6 @@
 ---
 layout: single
-title: ""
+title: "Neural Network Training"
 categories: ['Machine Learning']
 tag: Machine Learning Specialization
 typora-root-url: ../

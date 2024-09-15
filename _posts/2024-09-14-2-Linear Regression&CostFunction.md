@@ -58,7 +58,7 @@ Output으로 무한히 가능한 많은 숫자를 예측하기에, 위와 같은
 
 이제 Training set을 이용하여 Supervised Learning의 작동방식을 살펴보자.
 
-<img src="/images/2024-09-14-2-Linear Regression&CostFunction/image-20240915153930618.png" alt="image-20240915153930618" style="zoom:50%;"/>{: .align-center}
+<img src="https://cdn.jsdelivr.net/gh/gagyeomkim/gagyeomkim.github.io@master/images/2024-09-14-2-Linear%20Regression%26CostFunction/image-20240915153930618.png" alt="image-20240915153930618" style="zoom:50%;"/>{: .align-center}
 
 먼저, 입력(features)과 출력(targets)를 모두 포함하는 Training set을 학습 알고리즘에 공급한다.
 
