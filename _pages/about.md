@@ -8,7 +8,7 @@ comments: false
 <br>
 
 <div style="text-align: center">
-<img src="https://1drv.ms/i/s!AvDtmE0jTiDWcjY0luuW97jdt-0?embed=1&width=1280&height=854" style="max-width:100%; height: auto;"/>
+<img src="https://cdn.jsdelivr.net/gh/gagyeomkim/gagyeomkim.github.io@tree/master/images/about" style="max-width:100%; height: auto;"/>
 </div>
 
 
