@@ -8,7 +8,7 @@ comments: false
 <br>
 
 <div style="text-align: center">
-<img src="https://cdn.jsdelivr.net/gh/gagyeomkim/gagyeomkim.github.io@tree/master/images/about" style="max-width:100%; height: auto;"/>
+<img src="https://cdn.jsdelivr.net/gh/gagyeomkim/gagyeomkim.github.io@master/images/about/profile.jpg" style="max-width:100%; height: auto;"/>
 </div>
 
 
