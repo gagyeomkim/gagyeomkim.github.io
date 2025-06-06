@@ -1,5 +1,5 @@
 ---
-title: "[CV 논문 리뷰] GoogleNet(Going deeper with convolutions)"
+title: "[GoogleNet 논문 리뷰] - Going deeper with convolutions"
 
 categories: ["Computer Vision Paper Review"]
 tags:
