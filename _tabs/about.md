@@ -16,6 +16,7 @@ Github: [https://gagyeomkim.github.io](https://gagyeomkim.github.io)
 **Department of Computer Engineering**  
 _Bachelor Student (Mar. 2024 – Present)_  
 - GPA: 4.35 / 4.5  
+- TOEIC: 820
 
 ## RESEARCH INTERESTS
 
@@ -36,6 +37,5 @@ _Nov. 2024 – Dec. 2024, Korea_
 - Implemented DFS, BFS, and Dijkstra algorithms  
 
 ## SKILLS AND TECHNIQUES
-
 - **Programming Languages**: C, Java, Python  
 - **Frameworks/Libraries**: Keras, PyTorch
