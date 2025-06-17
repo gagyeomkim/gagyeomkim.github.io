@@ -197,13 +197,6 @@ defaults:
 sass:
   style: compressed
 
-plugins:
-  - jekyll-seo-tag
-  - jekyll-sitemap
-
-
-plugins:
-
 compress_html:
   clippings: all
   comments: all
